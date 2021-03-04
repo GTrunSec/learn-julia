@@ -30,23 +30,6 @@
         "type": "github"
       }
     },
-    "julia2nix": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1614735877,
-        "narHash": "sha256-mXOMYXiXZ2AAYfpSlrS+CjgJjM91Rz/nwkyO6VEoiNQ=",
-        "owner": "thomasjm",
-        "repo": "julia2nix",
-        "rev": "3beb21030e59881c93ea5589b716eef11cefe360",
-        "type": "github"
-      },
-      "original": {
-        "owner": "thomasjm",
-        "repo": "julia2nix",
-        "rev": "3beb21030e59881c93ea5589b716eef11cefe360",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1610942247,
@@ -66,7 +49,6 @@
       "inputs": {
         "devshell": "devshell",
         "flake-utils": "flake-utils",
-        "julia2nix": "julia2nix",
         "nixpkgs": "nixpkgs"
       }
     }
