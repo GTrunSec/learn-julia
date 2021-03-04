@@ -50,18 +50,10 @@ devshell.mkShell rec {
     {
       name = "pluto";
       command = ''
-        $(nix-build . --no-out-link)/bin/julia -e 'using Pluto; Pluto.run(host=" 10.220.170.112", port=8889)'
+        $(nix-build . --no-out-link)/bin/julia -e 'import Pkg; Pkg.activate("."); using Pluto; Pluto.run(host=" 10.220.170.112", port=8889)'
       '';
       category = "julia_package";
       help = "launch pluto server";
-    }
-    {
-      name = "IJulia_Install_Kernel";
-      command = ''
-        $(nix-build . --no-out-link)/bin/julia -e 'using IJulia; installkernel("My Julia2Nix Env", "--depwarn=no", env=Dict("JULIA_NUM_THREADS"=>"24"))'
-      '';
-      category = "julia_package";
-      help = "https://julialang.github.io/IJulia.jl/stable/manual/installation/";
     }
     {
       name = "addPackage";
