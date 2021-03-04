@@ -1,0 +1,9 @@
+#+TITLE: Julia Org
+
+
+#+begin_src julia :async t :exports both :results output
+1 + 1
+#+end_src
+
+#+RESULTS:
+: 2
