@@ -52,6 +52,7 @@ devshell.mkShell rec {
         $(nix-build . --no-out-link)/bin/julia -e 'using Pluto; Pluto.run(host=" 10.220.170.112", port=8889)'
       '';
       category = "julia_package";
+      help = "launch pluto server";
     }
     {
       name = "IJulia_Install_Kernel";
