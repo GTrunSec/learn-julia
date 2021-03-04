@@ -51,5 +51,12 @@ devshell.mkShell rec {
       '';
       category = "julia_package";
     }
+    {
+      name = "IJulia_Install_Kernel";
+      command = ''
+        $(nix-build . --no-out-link)/bin/julia -e 'using IJulia; installkernel("Julia nodeps", "--depwarn=no")'
+      '';
+      category = "julia_package";
+    }
   ];
 }
