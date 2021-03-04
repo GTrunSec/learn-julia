@@ -1,0 +1,4 @@
+# -*- mode: gitignore; -*-
+
+.julia_depot
+julia2nix
