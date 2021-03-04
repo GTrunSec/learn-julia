@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ pkgs ? import (import ./compat/fetch.nix "nixpkgs") { } }:
 
 with pkgs;
 let
