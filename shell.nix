@@ -38,11 +38,13 @@ devshell.mkShell rec {
         julia2nix/julia2nix && nix-build
       '';
       category = "julia2nix";
+      help = "generate the Julia Pkg's Nix expression and build Packages";
     }
     {
       name = "julia";
       command = "$(nix-build . --no-out-link)/bin/julia";
       category = "julia";
+      help = "wrapped Julia executable";
     }
     {
       name = "pluto";
@@ -54,9 +56,10 @@ devshell.mkShell rec {
     {
       name = "IJulia_Install_Kernel";
       command = ''
-        $(nix-build . --no-out-link)/bin/julia -e 'using IJulia; installkernel("Julia nodeps", "--depwarn=no")'
+        $(nix-build . --no-out-link)/bin/julia -e 'using IJulia; installkernel("My Julia2Nix Env", "--depwarn=no", env=Dict("JULIA_NUM_THREADS"=>"24"))'
       '';
       category = "julia_package";
+      help = "https://julialang.github.io/IJulia.jl/stable/manual/installation/";
     }
   ];
 }
