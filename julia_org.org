@@ -1,9 +1,12 @@
 #+TITLE: Julia Org
 
-
 #+begin_src julia :async t :exports both :results output
-1 + 1
+[zeros(Int, 2, 2) [1; 2]
+[3 4] 5]
 #+end_src
 
 #+RESULTS:
-: 2
+: 3×3 Array{Int64,2}:
+:  0  0  1
+:  0  0  2
+:  3  4  5

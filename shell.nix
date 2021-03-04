@@ -36,6 +36,7 @@ devshell.mkShell rec {
         ${pkgs.git}/bin/git clone https://github.com/thomasjm/julia2nix.git
         fi
         julia2nix/julia2nix && nix-build
+        $(nix-build . --no-out-link)/bin/julia -e 'import Pkg; Pkg.instantiate()'
       '';
       category = "julia2nix";
       help = "generate the Julia Pkg's Nix expression and build Packages";
@@ -61,6 +62,16 @@ devshell.mkShell rec {
       '';
       category = "julia_package";
       help = "https://julialang.github.io/IJulia.jl/stable/manual/installation/";
+    }
+    {
+      name = "addPackage";
+      command = ''
+        eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add(\"$2\")'")
+        # cleanup JULIA_DEPOT_PATH for Julia2nix Build
+        rm -rf $JULIA_DEPOT_PATH
+      '';
+      category = "julia_package";
+      help = "Exp: addPackage . StatsFuns -> <activatePath> <Package Name>";
     }
   ];
 }
