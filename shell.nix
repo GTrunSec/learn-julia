@@ -58,12 +58,14 @@ devshell.mkShell rec {
     {
       name = "addPackage";
       command = ''
+        rm -rf $JULIA_DEPOT_PATH
         eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'")
         # cleanup JULIA_DEPOT_PATH for Julia2nix Build
-        rm -rf $JULIA_DEPOT_PATH
       '';
       category = "julia_package";
-      help = "Exp: addPackage . StatsFuns -> <activatePath> <Package Name>";
+      help = ''
+        Exp: addPackage . '\"StatsFuns, Images\"' -> <activatePath> <Package Name List>
+      '';
     }
   ];
 }
