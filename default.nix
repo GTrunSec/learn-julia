@@ -10,7 +10,7 @@ let
   # shouldn't need this.
   # But if a package implicitly depends on some library being present, you can
   # add it here.
-  extraLibs = [ ];
+  extraLibs = [ gcc9 ];
 
   gr = import ./gr.nix { inherit pkgs; };
 
@@ -37,8 +37,5 @@ callPackage ./common.nix {
   # You can add additional flags here.
   makeWrapperArgs = "";
 
-  extraBuildInputs = [
-    #LIBSVM
-    gcc9
-  ];
+  extraBuildInputs = extraLibs;
 }

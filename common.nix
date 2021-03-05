@@ -17,7 +17,7 @@
   # Arguments
   makeWrapperArgs ? "",
   precompile ? true,
-  extraBuildInputs
+  extraBuildInputs ? []
 }:
 
 let

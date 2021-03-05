@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "My julia2nix Env";
   inputs = {
     devshell.url = "github:numtide/devshell";
     nixpkgs = { url = "nixpkgs/7d71001b796340b219d1bfa8552c81995017544a"; };
