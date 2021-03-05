@@ -11,7 +11,7 @@ let
   # But if a package implicitly depends on some library being present, you can
   # add it here.
   extraLibs = [
-    fftw
+    gcc9
   ];
 
   gr = import ../gr.nix { inherit pkgs; };
@@ -39,9 +39,8 @@ callPackage ./common.nix {
   # By default, it will just put the new depot at the end of JULIA_DEPOT_PATH.
   # You can add additional flags here.
   makeWrapperArgs = "";
+
   # Extra Pkgs to precompile environment
-  extraBuildInputs = [
-    #LIBSVM
-    gcc9
-  ];
+  extraBuildInputs = extraLibs;
+
 }
