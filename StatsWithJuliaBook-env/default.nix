@@ -10,15 +10,21 @@ let
   # shouldn't need this.
   # But if a package implicitly depends on some library being present, you can
   # add it here.
-  extraLibs = [ ];
+  extraLibs = [
+    fftw
+  ];
 
+  gr = import ./gr.nix { inherit pkgs; };
   # Wrapped Julia with libraries and environment variables.
   # Note: setting The PYTHON environment variable is recommended to prevent packages
   # from trying to obtain their own with Conda.
   julia = runCommand "julia-wrapped" { buildInputs = [ makeWrapper ]; } ''
     mkdir -p $out/bin
     makeWrapper ${baseJulia}/bin/julia $out/bin/julia \
-                --suffix LD_LIBRARY_PATH : "${lib.makeLibraryPath extraLibs}" \
+                --suffix LD_LIBRARY_PATH : "${lib.makeLibraryPath extraLibs}:${pkgs.R}/lib/R" \
+                --set R_HOME ${pkgs.R}/lib/R \
+                --set JULIA_NUM_THREADS 24 \
+                --set GRDIR ${gr} \
                 --set PYTHON ${python3}/bin/python
   '';
 
@@ -34,5 +40,8 @@ callPackage ./common.nix {
   # You can add additional flags here.
   makeWrapperArgs = "";
   # Extra Pkgs to precompile environment
-  extraBuildInputs = [ gcc9 ];
+  extraBuildInputs = [
+    #LIBSVM
+    gcc9
+  ];
 }
