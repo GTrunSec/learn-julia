@@ -3,3 +3,5 @@
 .julia_depot
 julia2nix
 result
+
+StatsWithJuliaBook

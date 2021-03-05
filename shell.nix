@@ -33,7 +33,7 @@ devshell.mkShell rec {
       name = "julia2nix";
       command = ''
         if [ ! -d  "./julia2nix" ]; then
-        ${pkgs.git}/bin/git clone https://github.com/thomasjm/julia2nix.git
+        ${pkgs.git}/bin/git clone https://github.com/GTrunSec/julia2nix.git -b extraBuildInputs
         fi
         julia2nix/julia2nix && nix-build
         $(nix-build . --no-out-link)/bin/julia -e 'import Pkg; Pkg.instantiate()'
