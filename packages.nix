@@ -3,7 +3,7 @@
   registryUrl = "https://github.com/JuliaRegistries/General.git";
   registryRev = "f98d2361466bf7ed380bb692c565f6a5e39689ce";
   registrySha256 = "1k3rrghdwwzc76d47d0phm3cgg66vj2g36qbhp9mzrvwcm4cfsis";
-  rootPackages = ["Distributions" "FFTW" "ForwardDiff" "Optim" "Pluto" "StatsFuns"];
+  rootPackages = ["Dates" "Distributions" "FFTW" "ForwardDiff" "Optim" "Pluto" "StatsFuns"];
   closure = [{
   name = "AbstractFFTs";
   uuid = "621f4979-c628-5d54-868e-fcf4e3e8185c";

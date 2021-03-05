@@ -14,7 +14,7 @@ let
     fftw
   ];
 
-  gr = import ./gr.nix { inherit pkgs; };
+  gr = import ../gr.nix { inherit pkgs; };
   # Wrapped Julia with libraries and environment variables.
   # Note: setting The PYTHON environment variable is recommended to prevent packages
   # from trying to obtain their own with Conda.

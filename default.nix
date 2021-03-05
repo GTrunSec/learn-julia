@@ -12,6 +12,8 @@ let
   # add it here.
   extraLibs = [ ];
 
+  gr = import ./gr.nix { inherit pkgs; };
+
   # Wrapped Julia with libraries and environment variables.
   # Note: setting The PYTHON environment variable is recommended to prevent packages
   # from trying to obtain their own with Conda.
@@ -19,6 +21,7 @@ let
     mkdir -p $out/bin
     makeWrapper ${baseJulia}/bin/julia $out/bin/julia \
                 --suffix LD_LIBRARY_PATH : "${lib.makeLibraryPath extraLibs}" \
+                --set GRDIR ${gr} \
                 --set PYTHON ${python3}/bin/python
   '';
 

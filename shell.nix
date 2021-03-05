@@ -58,7 +58,7 @@ devshell.mkShell rec {
     {
       name = "addPackage";
       command = ''
-        eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add(\"$2\")'")
+        eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'")
         # cleanup JULIA_DEPOT_PATH for Julia2nix Build
         rm -rf $JULIA_DEPOT_PATH
       '';
