@@ -10,9 +10,12 @@ let
   };
 in
 devshell.mkShell rec {
+
   name = "my-julia2nix-env";
-  packages = with pkgs;
-    [ ];
+
+  packages = with pkgs; [
+    direnv
+  ];
 
   env = [
     {
@@ -24,8 +27,10 @@ devshell.mkShell rec {
       prefix = "bin";
     }
     {
-      name = "JuliaBin";
-      value = "$(nix-build . --no-out-link)/bin/julia";
+      name = "DIR";
+      prefix = ''
+        $( cd "$(dirname "$\{\BASH_SOURCE [ 0 ]}")"; pwd )
+      '';
     }
   ];
   commands = with pkgs; [
@@ -43,7 +48,9 @@ devshell.mkShell rec {
     }
     {
       name = "julia";
-      command = "$(nix-build . --no-out-link)/bin/julia";
+      command = ''
+        $(nix-build . --no-out-link)/bin/julia "$@" -L $DIR/starup.jl
+      '';
       category = "julia";
       help = "wrapped Julia executable";
     }
@@ -58,7 +65,6 @@ devshell.mkShell rec {
     {
       name = "addPackage";
       command = ''
-        rm -rf $JULIA_DEPOT_PATH
         eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'")
         # cleanup JULIA_DEPOT_PATH for Julia2nix Build
       '';

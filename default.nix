@@ -22,7 +22,7 @@ let
     makeWrapper ${baseJulia}/bin/julia $out/bin/julia \
                 --suffix LD_LIBRARY_PATH : "${lib.makeLibraryPath extraLibs}" \
                 --set GRDIR ${gr} \
-                --set JULIA_NUM_THREADS 24
+                --set JULIA_NUM_THREADS 24 \
                 --set PYTHON ${python3}/bin/python
   '';
 
