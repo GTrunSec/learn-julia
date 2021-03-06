@@ -49,7 +49,7 @@ devshell.mkShell rec {
     {
       name = "julia";
       command = ''
-        $(nix-build . --no-out-link)/bin/julia "$@" -L $DIR/starup.jl
+        $(nix-build . --no-out-link)/bin/julia "$@" -L $DIR/startup.jl
       '';
       category = "julia";
       help = "wrapped Julia executable";
