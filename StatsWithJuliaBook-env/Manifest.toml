@@ -1311,6 +1311,12 @@ git-tree-sha1 = "63f2a51822bc5f402d6f1175f1ed751102f9c39a"
 uuid = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
 version = "0.12.21"
 
+[[PlutoUI]]
+deps = ["Base64", "Dates", "InteractiveUtils", "Logging", "Markdown", "Random", "Reexport", "Suppressor"]
+git-tree-sha1 = "b1c7a139fe6f4daaba29dc10a962f64541b41db3"
+uuid = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
+version = "0.7.2"
+
 [[PoissonRandom]]
 deps = ["Random", "Statistics", "Test"]
 git-tree-sha1 = "44d018211a56626288b5d3f8c6497d28c26dc850"
@@ -1664,6 +1670,11 @@ deps = ["CompilerSupportLibraries_jll", "Libdl", "OpenBLAS_jll", "Pkg", "SuiteSp
 git-tree-sha1 = "013ff4504fc1d475aa80c63b455b6b3a58767db2"
 uuid = "fb77eaff-e24c-56d4-86b1-d163f2edb164"
 version = "5.2.0+1"
+
+[[Suppressor]]
+git-tree-sha1 = "a819d77f31f83e5792a76081eee1ea6342ab8787"
+uuid = "fd094767-a336-5f1f-9728-57cf17d0bbfb"
+version = "0.2.0"
 
 [[SymbolicUtils]]
 deps = ["AbstractAlgebra", "AbstractTrees", "Combinatorics", "DataStructures", "IfElse", "LabelledArrays", "NaNMath", "SparseArrays", "SpecialFunctions", "StaticArrays", "TimerOutputs"]

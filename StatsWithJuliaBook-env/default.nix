@@ -12,6 +12,8 @@ let
   # add it here.
   extraLibs = [
     gcc9
+    gzip
+    zlib
   ];
 
   gr = import ../patch/gr.nix { inherit pkgs; };
