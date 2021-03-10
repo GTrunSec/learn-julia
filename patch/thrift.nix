@@ -8,7 +8,6 @@ let
 
 in
 runCommand "thrift" { inherit src; } ''
-  mkdir -p $out
-  tar -xf $src .
-  cp -r * $out
+  mkdir -p $out/usr/downloads
+  cp -r $src $out/usr/downloads/JuliaThriftBuilder.v0.2.0.x86_64-linux-gnu.tar.gz
 ''

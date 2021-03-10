@@ -11,7 +11,7 @@ runCommand "libsnappy-1.7.0"
 {
   inherit src;
 } ''
-  mkdir -p $out/
+  mkdir -p $out/usr
   tar -xf $src .
-  cp -r *  $out
+  cp -r *  $out/usr/.
 ''

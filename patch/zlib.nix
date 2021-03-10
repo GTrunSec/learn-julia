@@ -1,13 +1,13 @@
 { pkgs ? import <nixpkgs> { } }:
 with pkgs;
 let
-  src = fetchTarball {
-    url = "https://zlib.net/zlib-1.2.11.tar.gz";
-    sha256 = "sha256:098k1dq86ix9r5z63s1snxkmqz0mhdd1jy7inf5djwd3vv5jh0h1";
+  src = fetchurl {
+    url = "https://github.com/bicycle1885/ZlibBuilder/releases/download/v1.0.4/Zlib.v1.2.11.x86_64-linux-gnu.tar.gz";
+    sha256 = "sha256-HDschSBxP5jT9gXuHKXi42Vtkt22RBq+7v8K4SoRpiA=";
   };
 
 in
 runCommand "zlib" { inherit src; } ''
-  mkdir -p $out
-  cp -r $src/. $out
+  mkdir -p $out/usr/downloads
+  cp -r $src $out/usr/downloads/Zlib.v1.2.11.x86_64-linux-gnu.tar.gz
 ''

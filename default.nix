@@ -58,4 +58,18 @@ callPackage ./common.nix {
   makeWrapperArgs = " ";
 
   extraBuildInputs = extraLibs;
+
+  patchShell = ''
+    cp -r ${libsnappy}/usr $out/packages/Snappy/O2CHr/deps/.
+    cp -r ${zlibPath}/usr $out/packages/CodecZlib/5t9zO/deps/.
+    cp -r ${thrift}/usr $out/packages/Thrift/Xjowa/deps/.
+
+    mkdir -p $out/packages/Electron/aRIgh/deps/electron
+    electronPath=$(which electron)
+    ln -s $electronPath $out/packages/Electron/aRIgh/deps/electron/electron
+  '';
+
+  patchEval = ''
+    Pkg.build(["Snappy", "CodecZlib", "Thrift"])
+  '';
 }
