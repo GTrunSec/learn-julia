@@ -13,6 +13,9 @@ let
   extraLibs = [
     gcc9
     zlib
+
+    which
+    electron_11
   ];
 
   gr = import ./patch/gr.nix { inherit pkgs; };
