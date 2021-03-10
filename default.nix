@@ -10,20 +10,37 @@ let
   # shouldn't need this.
   # But if a package implicitly depends on some library being present, you can
   # add it here.
-  extraLibs = [ gcc9 ];
+  extraLibs = [
+    gcc9
+    zlib
+  ];
 
   gr = import ./patch/gr.nix { inherit pkgs; };
+  libsnappy = import ./patch/libsnappy.nix { inherit pkgs; };
+  thrift = import ./patch/thrift.nix { inherit pkgs; };
+  zlibPath = import ./patch/zlib.nix { inherit pkgs; };
 
+
+  custom-python-env = python3.buildEnv.override
+    {
+      extraLibs = with python3Packages; [ xlrd ];
+      ignoreCollisions = true;
+    };
   # Wrapped Julia with libraries and environment variables.
   # Note: setting The PYTHON environment variable is recommended to prevent packages
   # from trying to obtain their own with Conda.
-  julia = runCommand "julia-wrapped" { buildInputs = [ makeWrapper ]; } ''
+  julia = runCommand "julia-wrapped"
+    {
+      buildInputs = [ makeWrapper ];
+    } ''
     mkdir -p $out/bin
     makeWrapper ${baseJulia}/bin/julia $out/bin/julia \
-                --suffix LD_LIBRARY_PATH : "${lib.makeLibraryPath extraLibs}" \
+                --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath extraLibs}" \
                 --set GRDIR ${gr} \
                 --set JULIA_NUM_THREADS 24 \
-                --set PYTHON ${python3}/bin/python
+                --set PYTHON ${custom-python-env}/bin/python \
+                --set PYTHONPATH ${custom-python-env}/${pkgs.python3.sitePackages}
+
   '';
 
 in
@@ -32,11 +49,10 @@ callPackage ./common.nix {
 
   # Run Pkg.precompile() to precompile all packages?
   precompile = true;
-
   # Extra arguments to makeWrapper when creating the final Julia wrapper.
   # By default, it will just put the new depot at the end of JULIA_DEPOT_PATH.
   # You can add additional flags here.
-  makeWrapperArgs = "";
+  makeWrapperArgs = " ";
 
   extraBuildInputs = extraLibs;
 }

@@ -8,6 +8,11 @@ let
   devshell = import devshell' {
     inherit system;
   };
+  custom-python-env = pkgs.python3.buildEnv.override
+    {
+      extraLibs = with pkgs.python3Packages; [ xlrd ];
+      ignoreCollisions = true;
+    };
 in
 devshell.mkShell rec {
 
@@ -18,6 +23,14 @@ devshell.mkShell rec {
   ];
 
   env = [
+    {
+      name = "PYTHON";
+      value = "${custom-python-env}/bin/python";
+    }
+    {
+      name = "PYTHONPATH";
+      value = "${custom-python-env}/${pkgs.python3.sitePackages}";
+    }
     {
       name = "JULIA_DEPOT_PATH";
       value = "./.julia_depot";
@@ -49,7 +62,7 @@ devshell.mkShell rec {
     {
       name = "julia";
       command = ''
-        $(nix-build . --no-out-link)/bin/julia "$@" -L $DIR/startup.jl
+        $(nix-build . --no-out-link)/bin/julia -L $DIR/startup.jl $@
       '';
       category = "julia";
       help = "wrapped Julia executable";
@@ -67,6 +80,7 @@ devshell.mkShell rec {
       command = ''
         eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'")
         # cleanup JULIA_DEPOT_PATH for Julia2nix Build
+        julia2nix/julia2nix && nix-build
       '';
       category = "julia_package";
       help = ''
