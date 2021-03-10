@@ -1,4 +1,6 @@
 [deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DataVoyager = "5721bf48-af8e-5845-8445-c9e18126e773"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 Electron = "a1bb12fb-d4d1-54b4-b10a-ee7951ef7ad3"
