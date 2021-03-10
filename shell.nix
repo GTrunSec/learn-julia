@@ -70,7 +70,7 @@ devshell.mkShell rec {
     {
       name = "pluto";
       command = ''
-        $(nix-build . --no-out-link)/bin/julia -e 'import Pkg; Pkg.activate("."); using Pluto; Pluto.run(host=" 10.220.170.112", port=8889)'
+        eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'import Pkg; Pkg.activate(\".\"); using Pluto; Pluto.run(host=\"$1\", port=8889)'")
       '';
       category = "julia_package";
       help = "launch pluto server";
@@ -81,6 +81,7 @@ devshell.mkShell rec {
         eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'")
         # cleanup JULIA_DEPOT_PATH for Julia2nix Build
         julia2nix/julia2nix && nix-build
+        #rm -rf $JULIA_DEPOT_PATH
       '';
       category = "julia_package";
       help = ''
