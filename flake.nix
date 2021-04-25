@@ -1,20 +1,60 @@
 {
   description = "My julia2nix Env";
   inputs = {
-    devshell.url = "github:numtide/devshell";
+    devshell-flake = { url = "github:numtide/devshell"; };
     nixpkgs = { url = "nixpkgs/7d71001b796340b219d1bfa8552c81995017544a"; };
     flake-utils.url = "github:numtide/flake-utils";
+    flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
-  outputs = { self, nixpkgs, flake-utils, devshell }:
+  outputs = { self, nixpkgs, flake-utils, devshell-flake, flake-compat }:
     (flake-utils.lib.eachDefaultSystem
       (system:
         let
           pkgs = import nixpkgs {
             inherit system;
+            overlays = [
+              devshell-flake.overlay
+            ];
           };
         in
         {
-          devShell = import ./shell.nix { inherit nixpkgs; };
+          devShell = with pkgs;
+            let
+              custom-python-env = pkgs.python3.buildEnv.override
+                {
+                  extraLibs = with pkgs.python3Packages; [ xlrd ];
+                  ignoreCollisions = true;
+                };
+            in
+            devshell.mkShell {
+              imports = [
+                (devshell.importTOML ./commands.toml)
+              ];
+              env = [
+                {
+                  name = "PYTHON";
+                  value = "${custom-python-env}/bin/python";
+                }
+                {
+                  name = "PYTHONPATH";
+                  value = "${custom-python-env}/${pkgs.python3.sitePackages}";
+                }
+                {
+                  name = "JULIA_DEPOT_PATH";
+                  value = "./.julia_depot";
+                }
+                {
+                  name = "PATH";
+                  prefix = "bin";
+                }
+                {
+                  name = "DIR";
+                  prefix = ''
+                    $( cd "$(dirname "$\{\BASH_SOURCE [ 0 ]}")"; pwd )
+                  '';
+                }
+              ];
+            };
         }
       )
     );
