@@ -39,20 +39,6 @@
                   name = "PYTHONPATH";
                   value = "${custom-python-env}/${pkgs.python3.sitePackages}";
                 }
-                {
-                  name = "JULIA_DEPOT_PATH";
-                  value = "./.julia_depot";
-                }
-                {
-                  name = "PATH";
-                  prefix = "bin";
-                }
-                {
-                  name = "DIR";
-                  prefix = ''
-                    $( cd "$(dirname "$\{\BASH_SOURCE [ 0 ]}")"; pwd )
-                  '';
-                }
               ];
             };
         }

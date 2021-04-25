@@ -24,7 +24,8 @@ category = "Julia Package"
 command = '''
         eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'import Pkg; Pkg.activate(\".\"); using Pluto; Pluto.run(host=\"$1\", port=8889)'")
         '''
-help = "launch pluto server"
+help = "launch pluto server: pluto <ip> <port>"
+
 
 [[commands]]
 name = "addPackage"
