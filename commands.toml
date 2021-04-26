@@ -24,7 +24,7 @@ help = "wrapped Julia executable"
 name = "pluto"
 category = "Julia Package"
 command = '''
-        eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'import Pkg; Pkg.activate(\".\"); using Pluto; Pluto.run(host=\"$1\", port=8889)'")
+        eval $(echo "$(nix-build . --no-out-link)/bin/julia -e 'import Pkg; Pkg.activate(\".\"); using Pluto; Pluto.run(host=\"$1\", port=$2)'")
         '''
 help = "launch pluto server: pluto <ip> <port>"
 
