@@ -60,9 +60,9 @@ callPackage ./common.nix {
   extraBuildInputs = extraLibs;
 
   patchShell = ''
-    cp -r ${libsnappy}/usr $out/packages/Snappy/O2CHr/deps/.
-    cp -r ${zlibPath}/usr $out/packages/CodecZlib/5t9zO/deps/.
-    cp -r ${thrift}/usr $out/packages/Thrift/Xjowa/deps/.
+    cp -r ${libsnappy}/usr $out/packages/Snappy/*/deps/.
+    cp -r ${zlibPath}/usr $out/packages/CodecZlib/*/deps/.
+    cp -r ${thrift}/usr $out/packages/Thrift/*/deps/.
 
     mkdir -p $out/packages/Electron/aRIgh/deps/electron
     electronPath=$(which electron)

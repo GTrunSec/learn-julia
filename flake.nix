@@ -39,6 +39,13 @@
                   name = "PYTHONPATH";
                   value = "${custom-python-env}/${pkgs.python3.sitePackages}";
                 }
+                {
+                  name = "DIR";
+
+                  prefix = ''
+                    $( cd "$(dirname "$\{\BASH_SOURCE [ 0 ]}")"; pwd )
+                  '';
+                }
               ];
             };
         }

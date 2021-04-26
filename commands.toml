@@ -14,7 +14,9 @@ help = "generate the Julia Pkg's Nix expression and build Packages"
 [[commands]]
 name = "julia"
 category = "julia"
-command = "$(nix-build . --no-out-link)/bin/julia -L $DIR/startup.jl $@"
+command = '''
+        $(nix-build . --no-out-link)/bin/julia -L $DIR/startup.jl $@
+        '''
 help = "wrapped Julia executable"
 
 
@@ -47,8 +49,3 @@ value = "./.julia_depot"
 name = "PATH"
 prefix = "bin"
 
-[[env]]
-name = "DIR"
-prefix = '''
-       $( cd "$(dirname "$\{\BASH_SOURCE [ 0 ]}")"; pwd )
-      '''
