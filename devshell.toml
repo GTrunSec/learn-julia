@@ -45,6 +45,10 @@ name = "JULIA_DEPOT_PATH"
 value = "./.julia_depot"
 
 [[env]]
+name = "NIXPKGS_ALLOW_BROKEN"
+value = "1"
+
+[[env]]
 name = "PATH"
 prefix = "bin"
 

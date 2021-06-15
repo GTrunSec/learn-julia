@@ -2,7 +2,7 @@
   description = "My julia2nix Env";
   inputs = {
     devshell-flake = { url = "github:numtide/devshell"; };
-    nixpkgs = { url = "nixpkgs/7d71001b796340b219d1bfa8552c81995017544a"; };
+    nixpkgs = { url = "nixpkgs/75a93dfecc6c77ed7c35cc7f906175aca93facb4"; };
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
