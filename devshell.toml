@@ -15,7 +15,7 @@ help = "generate the Julia Pkg's Nix expression and build Packages"
 name = "julia"
 category = "julia"
 command = '''
-        $(nix-build . --no-out-link)/bin/julia -L $DIR/startup.jl $@
+        $(nix-build . --no-out-link)/bin/julia -L $DEVSHELL_ROOT/startup.jl $@
         '''
 help = "wrapped Julia executable"
 
@@ -42,7 +42,7 @@ help = "Exp: addPackage . '\"StatsFuns, Images\"' -> <activatePath> <Package Nam
 
 [[env]]
 name = "JULIA_DEPOT_PATH"
-value = "./.julia_depot"
+value = "$DEVSHELL_ROOT/.julia_depot"
 
 
 [[env]]
