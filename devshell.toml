@@ -42,8 +42,7 @@ help = "Exp: addPackage . '\"StatsFuns, Images\"' -> <activatePath> <Package Nam
 
 [[env]]
 name = "JULIA_DEPOT_PATH"
-value = "$DEVSHELL_ROOT/.julia_depot"
-
+value = "./.julia_depot"
 
 [[env]]
 name = "PATH"
