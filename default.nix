@@ -3,7 +3,11 @@
 with pkgs;
 let
   # The base Julia version
-  baseJulia = julia_15;
+  baseJulia = julia_15.overrideAttrs (oldAttrs: {
+    doCheck = false;
+    checkTarget = "";
+  });
+
 
   # Extra libraries for Julia's LD_LIBRARY_PATH.
   # Recent Julia packages that use Artifacts.toml to specify their dependencies
