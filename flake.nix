@@ -26,7 +26,7 @@
                   ignoreCollisions = true;
                 };
             in
-            devshell.mkShell {
+            with pkgs; devshell.mkShell {
               imports = [
                 (devshell.importTOML ./devshell.toml)
               ];
