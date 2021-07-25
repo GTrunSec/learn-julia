@@ -7,7 +7,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
   outputs = { self, nixpkgs, flake-utils, devshell-flake, flake-compat }:
-    (flake-utils.lib.eachDefaultSystem
+    (flake-utils.lib.eachSystem [ "x86_64-linux" ]
       (system:
         let
           pkgs = import nixpkgs {
@@ -15,6 +15,7 @@
             overlays = [
               devshell-flake.overlay
             ];
+            config = { };
           };
         in
         {
