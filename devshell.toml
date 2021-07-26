@@ -1,19 +1,10 @@
 [devshell]
 packages = [ "julia_16-bin" ]
 [[commands]]
-name = "julia-wrapped"
-category = "julia"
-command = '''
-        nix develop $DEVSHELL_ROOT -c -- julia -L $DEVSHELL_ROOT/startup.jl $@
-        '''
-help = "wrapped Julia executable"
-
-
-[[commands]]
 name = "pluto"
 category = "Julia Package"
 command = '''
-        nix develop $DEVSHELL_ROOT -c -- julia -e 'import Pkg; Pkg.activate("."); using Pluto; Pluto.run(host="10.220.170.112", port=8888)'
+        eval $(echo "julia -e 'import Pkg; Pkg.activate(\".\"); using Pluto; Pluto.run(host=\"$1\", port=$2)'")
         '''
 help = "launch pluto server: pluto <ip> <port>"
 
@@ -22,7 +13,7 @@ help = "launch pluto server: pluto <ip> <port>"
 name = "addPackage"
 category = "Julia Package"
 command = '''
-        nix develop $DEVSHELL_ROOT -c -- julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'
+        eval $(echo "julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'")
         '''
 help = "Exp: addPackage . '\"StatsFuns, Images\"' -> <activatePath> <Package Name List>"
 
@@ -30,11 +21,6 @@ help = "Exp: addPackage . '\"StatsFuns, Images\"' -> <activatePath> <Package Nam
 name = "JULIA_DEPOT_PATH"
 value = "./.julia_depot"
 
-[[env]]
-name = "NIXPKGS_ALLOW_BROKEN"
-value = "1"
-
-[[env]]
-name = "PATH"
-prefix = "bin"
-
+# [[env]]
+# name = "PATH"
+# prefix = "bin"
