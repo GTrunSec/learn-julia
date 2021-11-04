@@ -1,13 +1,29 @@
 [devshell]
-packages = [ "julia_16-bin" ]
+#packages = [ "julia_16-bin" ]
+#
+[[commands]]
+name = "julia-wrapped"
+category = "Julia Package"
+command = '''
+        eval $(echo "$PRJ_ROOT/julia -L $PRJ_ROOT/startup.jl")
+        '''
+help = "Wrapped Julia"
+
 [[commands]]
 name = "pluto"
 category = "Julia Package"
 command = '''
-        eval $(echo "julia -e 'import Pkg; Pkg.activate(\".\"); using Pluto; Pluto.run(host=\"$1\", port=$2)'")
+        eval $(echo "$PRJ_ROOT/julia -e 'import Pkg; Pkg.activate(\".\"); Pkg.instantiate(); using Pluto; Pluto.run(host=\"$1\", port=$2)'")
         '''
 help = "launch pluto server: pluto <ip> <port>"
 
+[[commands]]
+name = "link-master"
+category = "Julia"
+command = '''
+        ln -sf ~/ghq/git.sr.ht/\~ninjin/julia-nix/julia .
+        '''
+help = "link master's julia to local dir"
 
 [[commands]]
 name = "addPackage"
