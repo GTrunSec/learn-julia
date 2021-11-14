@@ -1,3 +1,6 @@
 [submodule "courses/StatsWithJuliaBook"]
 	path = courses/StatsWithJuliaBook
 	url = https://github.com/h-Klok/StatsWithJuliaBook.git
+[submodule "courses/18S191"]
+	path = courses/18S191
+	url = https://github.com/mitmath/18S191.git

@@ -2,7 +2,7 @@
 #packages = [ "julia_16-bin" ]
 #
 [[commands]]
-name = "julia-wrapped"
+name = "julia-bin"
 category = "Julia Package"
 command = '''
         eval $(echo "$PRJ_ROOT/julia -L $PRJ_ROOT/startup.jl")
