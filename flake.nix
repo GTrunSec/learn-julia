@@ -1,48 +1,37 @@
 {
   description = "My julia2nix Env";
   inputs = {
-    devshell-flake = { url = "github:numtide/devshell"; };
+    devshell = { url = "github:numtide/devshell"; };
     nixpkgs = { url = "nixpkgs/release-21.05"; };
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
+    bud = {
+      url = "github:gtrunsec/bud/custom";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.devshell.follows = "devshell";
+    };
   };
-  outputs = { self, nixpkgs, flake-utils, devshell-flake, flake-compat }:
-    (flake-utils.lib.eachSystem [ "x86_64-linux" ]
+  outputs = { self, nixpkgs, flake-utils, devshell, flake-compat, bud }@inputs:
+    (flake-utils.lib.eachDefaultSystem
       (system:
         let
           pkgs = import nixpkgs {
             inherit system;
             overlays = [
-              devshell-flake.overlay
+              devshell.overlay
             ];
             config = { };
           };
         in
         {
-          devShell = with pkgs;
-            let
-              custom-python-env = pkgs.python3.buildEnv.override
-                {
-                  extraLibs = with pkgs.python3Packages; [ xlrd ];
-                  ignoreCollisions = true;
-                };
-            in
-            with pkgs; devshell.mkShell {
-              imports = [
-                (devshell.importTOML ./devshell.toml)
-              ];
-              env = [
-                {
-                  name = "PYTHON";
-                  value = "${custom-python-env}/bin/python";
-                }
-                {
-                  name = "PYTHONPATH";
-                  value = "${custom-python-env}/${pkgs.python3.sitePackages}";
-                }
-              ];
-            };
+          devShell = import ./shell { inherit inputs pkgs self; };
         }
       )
-    );
+    ) //
+    {
+      budModules =
+        {
+          julia2nix = import ./shell/julia2nix;
+        };
+    };
 }

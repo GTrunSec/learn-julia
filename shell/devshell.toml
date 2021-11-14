@@ -18,14 +18,6 @@ command = '''
 help = "launch pluto server: pluto <ip> <port>"
 
 [[commands]]
-name = "link-master"
-category = "Julia"
-command = '''
-        ln -sf ~/ghq/git.sr.ht/\~ninjin/julia-nix/julia .
-        '''
-help = "link master's julia to local dir"
-
-[[commands]]
 name = "addPackage"
 category = "Julia Package"
 command = '''

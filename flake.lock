@@ -1,12 +1,60 @@
 {
   "nodes": {
-    "devshell-flake": {
+    "beautysh": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "bud",
+          "nixpkgs"
+        ],
+        "poetry2nix": "poetry2nix"
+      },
       "locked": {
-        "lastModified": 1635874631,
-        "narHash": "sha256-dyXYl7tL7LRNl5FOLPk2LVM+47FNUz1lsEXptYDLRzE=",
+        "lastModified": 1630693543,
+        "narHash": "sha256-7Sly3ReaJZw60Qo0rpfN4jF6zy94nwQz6ENgUUFzJfg=",
+        "owner": "lovesegfault",
+        "repo": "beautysh",
+        "rev": "5609593961b70428f58d5c1b4b25cdda43b0d0bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lovesegfault",
+        "repo": "beautysh",
+        "type": "github"
+      }
+    },
+    "bud": {
+      "inputs": {
+        "beautysh": "beautysh",
+        "devshell": [
+          "devshell"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1636676309,
+        "narHash": "sha256-sr9/jZ0Q0EOSMcv7FQpKzw/cGsXWTYEc0azlaFexAJs=",
+        "owner": "gtrunsec",
+        "repo": "bud",
+        "rev": "2520c5e134e9e0cd049a68829f98eceab205019e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gtrunsec",
+        "ref": "custom",
+        "repo": "bud",
+        "type": "github"
+      }
+    },
+    "devshell": {
+      "locked": {
+        "lastModified": 1636119665,
+        "narHash": "sha256-e11Z9PyH9hdgTm4Vyl8S5iTwrv0um6+srzb1Ba+YUHA=",
         "owner": "numtide",
         "repo": "devshell",
-        "rev": "881e205bad8db0017486a626d8ce9459a720fa3f",
+        "rev": "ab14b1a3cb253f58e02f5f849d621292fbf81fad",
         "type": "github"
       },
       "original": {
@@ -33,6 +81,21 @@
     },
     "flake-utils": {
       "locked": {
+        "lastModified": 1623875721,
+        "narHash": "sha256-A8BU7bjS5GirpAUv4QA+QnJ4CceLHkcXdRp4xITDB0s=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "f7e004a55b120c02ecb6219596820fcd32ca8772",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "locked": {
         "lastModified": 1634851050,
         "narHash": "sha256-N83GlSGPJJdcqhUxSCS/WwW5pksYf3VP1M13cDRTSVA=",
         "owner": "numtide",
@@ -48,11 +111,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1635919662,
-        "narHash": "sha256-m2EGNUBMcIER4sSagK3U/HzQuvYt1r27bcfnsUjeB2g=",
+        "lastModified": 1636773800,
+        "narHash": "sha256-zhfNZrX2ARCUvhfPz1n8SbxfMlmmSfSj9evyps/FIKA=",
         "ref": "release-21.05",
-        "rev": "b239cf7ba017c1abb1d5f0421bc360f9612cac58",
-        "revCount": 295487,
+        "rev": "df696225f76fc1ee2432805d3934942dfe866309",
+        "revCount": 295570,
         "type": "git",
         "url": "file:///nix/nixpkgs"
       },
@@ -62,11 +125,39 @@
         "type": "indirect"
       }
     },
+    "poetry2nix": {
+      "inputs": {
+        "flake-utils": [
+          "bud",
+          "beautysh",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "bud",
+          "beautysh",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1625240517,
+        "narHash": "sha256-2E1gaOP+bCplhf3kliVQWK5N1NV2h06mkJk2KTiRTJQ=",
+        "owner": "nix-community",
+        "repo": "poetry2nix",
+        "rev": "e40e8ed0e8c11e709e4c8c7c20174facd265a021",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "poetry2nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "devshell-flake": "devshell-flake",
+        "bud": "bud",
+        "devshell": "devshell",
         "flake-compat": "flake-compat",
-        "flake-utils": "flake-utils",
+        "flake-utils": "flake-utils_2",
         "nixpkgs": "nixpkgs"
       }
     }
