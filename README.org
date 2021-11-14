@@ -1,0 +1,33 @@
+#+TITLE: My Julia Env
+
+* Julia Version
+#+begin_src julia :async :exports both :results output
+versioninfo()
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Julia Version 1.7.0-rc2
+Commit f23fc0d27a* ()
+Platform Info:
+  OS: Linux (x86_64-unknown-linux-gnu)
+  CPU: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
+  WORD_SIZE: 64
+  LIBM: libopenlibm
+  LLVM: libLLVM-12.0.1 (ORCJIT, skylake)
+Environment:
+  JULIA_DEPOT_PATH = ./.julia_depot
+#+end_example
+
+
+* Julia Test
+#+begin_src julia :async :exports both :results output
+[zeros(Int, 2, 2) [1; 2]
+[3 4] 5]
+#+end_src
+
+#+RESULTS:
+: 3×3 Matrix{Int64}:
+:  0  0  1
+:  0  0  2
+:  3  4  5
