@@ -1,0 +1,898 @@
+* Julia Data Science Book
+:PROPERTIES:
+:ID:       074c8426-7bfc-43b0-876a-fd9dac319686
+:END:
+** Skeleton [2/2]
+*** DONE Link on page 2: [[https://juliadatascience.io][https://juliadatascience.io]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+*** DONE Preface
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** What is Data Science?
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 6: [[https://en.wikipedia.org/wiki/Data_literacy][https://en.wikipedia.o]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 6: [[https://en.wikipedia.org/wiki/Data_literacy][rg/wiki/Data_literacy]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Software Engineering
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Acknowledgements
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://orcid.org/0000-0002-8178-7313][https://orcid.org/0000]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://orcid.org/0000-0002-8178-7313][-0002-8178-7313]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://orcid.org/0000-0003-0430-950X][https://orcid.org/0000]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://orcid.org/0000-0003-0430-950X][-0003-0430-950X]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://orcid.org/0000-0001-8599-9009][https://orcid.org/0000]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://orcid.org/0000-0001-8599-9009][-0001-8599-9009]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://www.rug.nl/staff/peter.de.jonge/][https://www.rug.nl/s]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://www.rug.nl/staff/peter.de.jonge/][taff/peter.de.jonge/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://www.rug.nl/staff/j.r.den.hartigh/][https://www.rug.nl/s]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://www.rug.nl/staff/j.r.den.hartigh/][taff/j.r.den.hartigh/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://frankblaauw.nl/][https://frankblaauw.]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 8: [[https://frankblaauw.nl/][nl/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+*** Why Julia?
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** DONE For Non-Programmers
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** DONE For Programmers
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** What Julia Aims to Accomplish?
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://julialang.org/blog/2012/02/why-we-created-julia/][https://julialang.org/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://julialang.org/blog/2012/02/why-we-created-julia/][blog/2012/02/why-we-]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://julialang.org/blog/2012/02/why-we-created-julia/][created-julia/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://www.hpcwire.com/off-the-wire/julia-joins-petaflop-club/][https://www.hpcwire.]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://www.hpcwire.com/off-the-wire/julia-joins-petaflop-club/][com/off-the-wire/julia]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://www.hpcwire.com/off-the-wire/julia-joins-petaflop-club/][-joins-petaflop-club/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://www.nextplatform.com/2017/11/28/julia-language-delivers-petascale-hpc-performance/][https://www.nextpl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://www.nextplatform.com/2017/11/28/julia-language-delivers-petascale-hpc-performance/][atform.com/2017/11/2]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://www.nextplatform.com/2017/11/28/julia-language-delivers-petascale-hpc-performance/][8/julia-language-deliv]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://www.nextplatform.com/2017/11/28/julia-language-delivers-petascale-hpc-performance/][ers-petascale-hpc-perf]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 11: [[https://www.nextplatform.com/2017/11/28/julia-language-delivers-petascale-hpc-performance/][ormance/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 12: [[http://llvm.org][http://llvm.org]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 13: [[https://julialang.org/benchmarks/][https://julialang.org/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 13: [[https://julialang.org/benchmarks/][benchmarks/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 13: [[https://julialang.org/benchmarks/][https://julialang.org/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 13: [[https://julialang.org/benchmarks/][benchmarks/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 15: [[https://youtu.be/qGW0GT1rCvs][https://youtu.be/q]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 15: [[https://youtu.be/qGW0GT1rCvs][GW0GT1rCvs]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://storopoli.io/Bayesian-Julia/pages/1_why_Julia/#example_one-hot_vector][https://storopoli.io hot vector 18 by Storopoli (2021). The second is an interview with Christopher /Bayesian-Julia/page]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://storopoli.io/Bayesian-Julia/pages/1_why_Julia/#example_one-hot_vector][/Bayesian-Julia/pages/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://storopoli.io/Bayesian-Julia/pages/1_why_Julia/#example_one-hot_vector][1_why_Julia/#example]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://storopoli.io/Bayesian-Julia/pages/1_why_Julia/#example_one-hot_vector][_one-hot_vector]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://www.chrisrackauckas.com/][ons 19 https://www.chrisrac]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://www.chrisrackauckas.com/][kauckas.com/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://youtu.be/moyPIhvw4Nk?t=2107][https://youtu.be/m]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://youtu.be/moyPIhvw4Nk?t=2107][oyPIhvw4Nk?t=2107]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://diffeq.sciml.ai/dev/][PIhvw4Nk?t=2107 21 https://diffeq.sciml.a]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://diffeq.sciml.ai/dev/][i/dev/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://youtu.be/kc9HwsxE1OY][https://youtu.be/kc9]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://youtu.be/kc9HwsxE1OY][HwsxE1OY]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Julia in the Wild
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://exoplanets.nasa.gov/news/1669/seven-rocky-trappist-1-planets-may-be-made-of-similar-stuff/][https://exoplanets.n]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://exoplanets.nasa.gov/news/1669/seven-rocky-trappist-1-planets-may-be-made-of-similar-stuff/][asa.gov/news/1669/se]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://exoplanets.nasa.gov/news/1669/seven-rocky-trappist-1-planets-may-be-made-of-similar-stuff/][ven-rocky-trappist-1-p]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://exoplanets.nasa.gov/news/1669/seven-rocky-trappist-1-planets-may-be-made-of-similar-stuff/][lanets-may-be-made-o]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://exoplanets.nasa.gov/news/1669/seven-rocky-trappist-1-planets-may-be-made-of-similar-stuff/][f-similar-stuff/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://clima.caltech.edu/][https://clima.caltech.]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://clima.caltech.edu/][edu/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://youtu.be/19zm1Fn0S9M][https://youtu.be/19z]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://youtu.be/19zm1Fn0S9M][m1Fn0S9M]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://juliacomputing.com/case-studies/pfizer/][https://juliacomputi]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://juliacomputing.com/case-studies/pfizer/][ng.com/case-studies/pf]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://juliacomputing.com/case-studies/pfizer/][izer/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://chrisrackauckas.com/assets/Posters/ACoP11_Poster_Abstracts_2020.pdf][https://chrisrackauc]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://chrisrackauckas.com/assets/Posters/ACoP11_Poster_Abstracts_2020.pdf][kas.com/assets/Posters]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://chrisrackauckas.com/assets/Posters/ACoP11_Poster_Abstracts_2020.pdf][/ACoP11_Poster_Abstr]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://chrisrackauckas.com/assets/Posters/ACoP11_Poster_Abstracts_2020.pdf][acts_2020.pdf]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://web.archive.org/web/20210121164011/https://www.go-acop.org/abstract-awards][https://web.arch]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://web.archive.org/web/20210121164011/https://www.go-acop.org/abstract-awards][ive.org/web/2021]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://web.archive.org/web/20210121164011/https://www.go-acop.org/abstract-awards][0121164011/https:]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://web.archive.org/web/20210121164011/https://www.go-acop.org/abstract-awards][//www.go-acop.org/ab]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://web.archive.org/web/20210121164011/https://www.go-acop.org/abstract-awards][stract-awards]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://discourse.julialang.org/t/julia-and-the-satellite-amazonia-1/57541][https://discourse.juli]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://discourse.julialang.org/t/julia-and-the-satellite-amazonia-1/57541][alang.org/t/julia-and-]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://ronanarraes.com/][ht]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://discourse.julialang.org/t/julia-and-the-satellite-amazonia-1/57541][the-satellite-amazonia]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://discourse.julialang.org/t/julia-and-the-satellite-amazonia-1/57541][-1/57541]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 18: [[https://ronanarraes.com/][tps://ronanarraes.com/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 19: [[https://youtu.be/NY0HcGqHj3g][https://youtu.be/N]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 19: [[https://youtu.be/NY0HcGqHj3g][Y0HcGqHj3g]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 19: [[https://juliacomputing.com/case-studies/][https://juliacomputi]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 19: [[https://juliacomputing.com/case-studies/][ng.com/case-studies/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+*** Julia Basics
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 21: [[https://docs.julialang.org/][https:]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 21: [[https://docs.julialang.org/][//docs.julialang.org/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Development Environments
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 22: [[https://github.com/timholy/Revise.jl][https://github.com/t]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 22: [[https://github.com/timholy/Revise.jl][imholy/Revise.jl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 22: [[https://github.com/fonsp/Pluto.jl][https://github.com/f]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 22: [[https://github.com/fonsp/Pluto.jl][onsp/Pluto.jl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Language Syntax
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+
+**** Native Data Structures
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 37: [[https://github.com/JuliaLang/julia/issues/11030][https://github.com]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 37: [[https://github.com/JuliaLang/julia/issues/11030][/JuliaLang/julia/issues/11030]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 39: [[https://docs.julialang.org/en/v1/manual/strings/#Regular-Expressions][https://docs.julialang]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 39: [[https://docs.julialang.org/en/v1/manual/strings/#Regular-Expressions][.org/en/v1/manual/st]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 39: [[https://docs.julialang.org/en/v1/manual/strings/#Regular-Expressions][rings/#Regular-Express]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 39: [[https://docs.julialang.org/en/v1/manual/strings/#Regular-Expressions][ions]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Filesystem
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Julia Standard Library
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 68: [[https://docs.julialang.org/en/v1/stdlib/Dates/#Dates.DateFormat][https://docs.julialang]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 68: [[https://docs.julialang.org/en/v1/stdlib/Dates/#Dates.DateFormat][.org/en/v1/stdlib/Date]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 68: [[https://docs.julialang.org/en/v1/stdlib/Dates/#Dates.DateFormat][s/#Dates.DateFormat]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 68: [[https://docs.julialang.org/en/v1/stdlib/Dates/#Constructors][https://docs.julialang According to Julia Dates ’ documentation 8 , using the Date(date_string, format_string .org/en/v1/stdlib/Date]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 68: [[https://docs.julialang.org/en/v1/stdlib/Dates/#Constructors][ng .org/en/v1/stdlib/Date]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 68: [[https://docs.julialang.org/en/v1/stdlib/Dates/#Constructors][s/#Constructors]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 70: [[https://github.com/JuliaFinance/BusinessDays.jl][https://github.com/J]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 70: [[https://github.com/JuliaFinance/BusinessDays.jl][uliaFinance/Business]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 70: [[https://github.com/JuliaFinance/BusinessDays.jl][Days.jl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 74: [[https://docs.julialang.org/en/v1/stdlib/Random/][https://docs.julialang]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 74: [[https://docs.julialang.org/en/v1/stdlib/Random/][.org/en/v1/stdlib/Ra]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 74: [[https://docs.julialang.org/en/v1/stdlib/Random/][ndom/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 77: [[https://github.com/JuliaDataScience/JuliaDataScience][https://github.com/J]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 77: [[https://github.com/JuliaDataScience/JuliaDataScience][uliaDataScience/JuliaD]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 77: [[https://github.com/JuliaDataScience/JuliaDataScience][ataScience]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 78: [[https://github.com/JuliaWeb/HTTP.jl][https://github.com/J]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 78: [[https://github.com/JuliaWeb/HTTP.jl][uliaWeb/HTTP.jl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+*** DataFrames.jl
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Load and Save Files
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 84: [[http://csv.juliadata.org/latest/][http://csv.juliadata.or]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 84: [[http://csv.juliadata.org/latest/][g/latest/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 88: [[https://csv.juliadata.org/stable][https://csv.juliadata.]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 88: [[https://csv.juliadata.org/stable][org/stable]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 88: [[https://csv.juliadata.org/stable/#CSV.File][https://csv.juliadata.]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 88: [[https://csv.juliadata.org/stable/#CSV.File][org/stable/#CSV.File]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 88: [[https://github.com/felipenoris/XLSX.jl][https://github.com/fel]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 88: [[https://github.com/felipenoris/XLSX.jl][ipenoris/XLSX.jl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 89: [[https://felipenoris.github.io/XLSX.jl/stable/][https://felipenoris.gi]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 89: [[https://felipenoris.github.io/XLSX.jl/stable/][thub.io/XLSX.jl/stable/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Index and Summarize
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Filter and Subset
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 92: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/5][https://discourse.julial]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 92: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/5][ang.org/t/pull-datafra]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 92: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/5][ang.org/t/pull-datafra mes-columns-to-the-f]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 92: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/5][ront/60327/5]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Select
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 98: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/4][https:]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 98: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/4][//discourse.julialan]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 98: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/4][g.org/t/pull-datafra  mes-columns-to-the]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 98: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/4][mes-columns-to-the-f]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 98: [[https://discourse.julialang.org/t/pull-dataframes-columns-to-the-front/60327/4][ront/60327/4]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 98: [[https://bkamins.github.io/julialang/2021/02/06/colsel.html][https://bkamins.gith]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 98: [[https://bkamins.github.io/julialang/2021/02/06/colsel.html][ub.io/julialang/2021/0]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 98: [[https://bkamins.github.io/julialang/2021/02/06/colsel.html][2/06/colsel.html]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Types and Missing Data
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Join
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 103: [[https://DataFrames.juliadata.org/stable/man/joins/][https://DataFrames.j]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 103: [[https://DataFrames.juliadata.org/stable/man/joins/][uliadata.org/stable/ma]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 103: [[https://DataFrames.juliadata.org/stable/man/joins/][n/joins/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Variable Transformations
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Groupby and Combine
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Performance
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+*** Data Visualization with Makie.jl
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 119: [[http://makie.juliaplots.org/stable/index.html][http://makie.juliaplots]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 119: [[http://makie.juliaplots.org/stable/index.html][- .org/stable/index.html]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 119: [[http://makie.juliaplots.org/stable/documentation/backends_and_output/][http://makie.juliaplots]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 119: [[http://makie.juliaplots.org/stable/documentation/backends_and_output/][.org/stable/documentat]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 119: [[http://makie.juliaplots.org/stable/documentation/backends_and_output/][ion/backends_and_out]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 119: [[http://makie.juliaplots.org/stable/documentation/backends_and_output/][put/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 120: [[https://makie.juliaplots.org/stable/documentation/backends_and_output/][https://makie.juliaplo]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 120: [[https://makie.juliaplots.org/stable/documentation/backends_and_output/][ts.org/stable/document]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 120: [[https://makie.juliaplots.org/stable/documentation/backends_and_output/][ation/backends_and_o]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 120: [[https://makie.juliaplots.org/stable/documentation/backends_and_output/][utput/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** CairoMakie.jl
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Attributes
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Themes
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 127: [[http://makie.juliaplots.org/stable/documentation/theming/predefined_themes/index.html][http://makie.juliaplots]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 127: [[http://makie.juliaplots.org/stable/documentation/theming/predefined_themes/index.html][.org/stable/documentat]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 127: [[http://makie.juliaplots.org/stable/documentation/theming/predefined_themes/index.html][ion/theming/predefin]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 127: [[http://makie.juliaplots.org/stable/documentation/theming/predefined_themes/index.html][ed_themes/index.html]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Using LaTeXStrings.jl
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 133: [[http://makie.juliaplots.org/stable/documentation/theming/index.html#cycles][http://makie.juliaplo]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 133: [[http://makie.juliaplots.org/stable/documentation/theming/index.html#cycles][ts.org/stable/document]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 133: [[http://makie.juliaplots.org/stable/documentation/theming/index.html#cycles][ation/theming/index.ht]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 133: [[http://makie.juliaplots.org/stable/documentation/theming/index.html#cycles][ml#cycles]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[http://makie.juliaplots.org/stable/documentation/theming/index.html#cycles][http://makie.juliaplo]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[http://makie.juliaplots.org/stable/documentation/theming/index.html#cycles][ts.org/stable/document]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[http://makie.juliaplots.org/stable/documentation/theming/index.html#cycles][ation/theming/index.ht]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[http://makie.juliaplots.org/stable/documentation/theming/index.html#cycles][ml#cycles]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Colors and Colormaps
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://github.com/JuliaGraphics/Colors.jl][https://github.com/J]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://github.com/JuliaGraphics/Colors.jl][uliaGraphics/Colors.jl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://juliagraphics.github.io/Colors.jl/latest/namedcolors/][https://juliagraphics.]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://juliagraphics.github.io/Colors.jl/latest/namedcolors/][github.io/Colors.jl/late]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://juliagraphics.github.io/Colors.jl/latest/namedcolors/][st/namedcolors/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://github.com/JuliaGraphics/ColorSchemes.jl][https://github.com/J]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://github.com/JuliaGraphics/ColorSchemes.jl][uliaGraphics/ColorSc]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://github.com/JuliaGraphics/ColorSchemes.jl][hemes.jl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://github.com/peterkovesi/PerceptualColourMaps.jl][https://github.com/p]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://github.com/peterkovesi/PerceptualColourMaps.jl][eterkovesi/PerceptualC]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 134: [[https://github.com/peterkovesi/PerceptualColourMaps.jl][olourMaps.jl]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Layouts
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** GLMakie.jl
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 150: [[http://www.opengl.org/][http://www.opengl.o]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 150: [[http://www.opengl.org/][rg/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 155: [[https://en.wikipedia.org/wiki/Ray_tracing_(graphics)][https://en.wikipedia]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 155: [[https://en.wikipedia.org/wiki/Ray_tracing_(graphics)][.org/wiki/Ray_tracing]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 155: [[https://en.wikipedia.org/wiki/Ray_tracing_(graphics)][_(graphics)]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+*** Appendix
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Packages Versions
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Notation
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 161: [[https://docs.julialang.org/en/v1/manual/style-guide/][https://docs.julialang]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 161: [[https://docs.julialang.org/en/v1/manual/style-guide/][.org/en/v1/manual/st]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 161: [[https://docs.julialang.org/en/v1/manual/style-guide/][yle-guide/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 162: [[https://github.com/invenia/BlueStyle][https://github.com/i]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 162: [[https://github.com/invenia/BlueStyle][nvenia/BlueStyle]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+***** Link on page 164: [[http://semver.org][http://semver.org]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+*** References
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://www.domo.com/assets/downloads/18_domo_data-never-sleeps-6+verticals.pdf][https://www.domo.com/assets/downlo]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://www.domo.com/assets/downloads/18_domo_data-never-sleeps-6+verticals.pdf][ads/18_domo_data-never-sleeps-6+verticals.pdf]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://jump.dev/JuMP.jl/v0.21/developers/style/#using-vs.-import][https://jump.dev/JuMP.jl/v0.21/developers/style/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://jump.dev/JuMP.jl/v0.21/developers/style/#using-vs.-import][#using-vs.-import]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://doi.org/10.1162/99608f92.ba20f892][https://doi.org/10.1162/99608f92.ba20f892]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://doi.org/10.1038/d41586-019-02310-3][https://doi.org/10.1038/d41586-019-02310-3]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://storopoli.io/Bayesian-Julia][https://storopoli.io]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://storopoli.io/Bayesian-Julia][/Bayesian-Julia]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://youtu.be/moyPIhvw4Nk][https://youtu.be/moyPIhv]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://youtu.be/moyPIhvw4Nk][w4Nk]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://youtu.be/qGW0GT1rCvs][https://youtu.be/qGW0GT1rCvs]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
+**** Link on page 165: [[https://www.python.org/dev/peps/pep-0008/][https://www.python.org/dev/peps/pep-0008/]]
+:PROPERTIES:
+:NOTER_PAGE:
+:END:
