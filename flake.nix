@@ -2,16 +2,16 @@
   description = "My julia2nix Env";
   inputs = {
     devshell = { url = "github:numtide/devshell"; };
-    nixpkgs = { url = "nixpkgs/release-21.05"; };
+
+    nixpkgs = { url = "github:NixOS/nixpkgs/release-21.11"; };
     flake-utils.url = "github:numtide/flake-utils";
-    flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
     bud = {
       url = "github:gtrunsec/bud/custom";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.devshell.follows = "devshell";
     };
   };
-  outputs = { self, nixpkgs, flake-utils, devshell, flake-compat, bud }@inputs:
+  outputs = { self, nixpkgs, flake-utils, devshell, bud }@inputs:
     (flake-utils.lib.eachDefaultSystem
       (system:
         let

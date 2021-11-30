@@ -50,32 +50,16 @@
     },
     "devshell": {
       "locked": {
-        "lastModified": 1636119665,
-        "narHash": "sha256-e11Z9PyH9hdgTm4Vyl8S5iTwrv0um6+srzb1Ba+YUHA=",
+        "lastModified": 1637575296,
+        "narHash": "sha256-ZY8YR5u8aglZPe27+AJMnPTG6645WuavB+w0xmhTarw=",
         "owner": "numtide",
         "repo": "devshell",
-        "rev": "ab14b1a3cb253f58e02f5f849d621292fbf81fad",
+        "rev": "0e56ef21ba1a717169953122c7415fa6a8cd2618",
         "type": "github"
       },
       "original": {
         "owner": "numtide",
         "repo": "devshell",
-        "type": "github"
-      }
-    },
-    "flake-compat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1627913399,
-        "narHash": "sha256-hY8g6H2KFL8ownSiFeMOjwPC8P0ueXpCVEbxgda3pko=",
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "rev": "12c64ca55c1014cdc1b16ed5a804aa8576601ff2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "edolstra",
-        "repo": "flake-compat",
         "type": "github"
       }
     },
@@ -111,18 +95,18 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1636773800,
-        "narHash": "sha256-zhfNZrX2ARCUvhfPz1n8SbxfMlmmSfSj9evyps/FIKA=",
-        "ref": "release-21.05",
-        "rev": "df696225f76fc1ee2432805d3934942dfe866309",
-        "revCount": 295570,
-        "type": "git",
-        "url": "file:///nix/nixpkgs"
+        "lastModified": 1637741280,
+        "narHash": "sha256-O5JZVH37ZPSNYOtQI8Yo1qyWL8KY/zrgXFowvho59/E=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "b0ad37110045447f74207e45a970d7a27f9d1657",
+        "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "ref": "release-21.05",
-        "type": "indirect"
+        "owner": "NixOS",
+        "ref": "release-21.11",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "poetry2nix": {
@@ -156,7 +140,6 @@
       "inputs": {
         "bud": "bud",
         "devshell": "devshell",
-        "flake-compat": "flake-compat",
         "flake-utils": "flake-utils_2",
         "nixpkgs": "nixpkgs"
       }

@@ -1,4 +1,5 @@
 ((nil .  ((eval . (setq-local inferior-julia-program-name "julia-bin"))
           (eval . (setq-local julia-program "julia-bin"))
           (eval . (setq-local org-babel-julia-command "julia-bin"))
-          )))
+          (eval . (setq-local julia-snail-executable "~/ghq/github.com/GTrunSec/my-julia2nix-env/bin/julia"))
+                    )))

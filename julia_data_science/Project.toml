@@ -1,2 +1,4 @@
 [deps]
+Arrow = "69666777-d1a9-59fb-9406-91d4454c9d45"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"

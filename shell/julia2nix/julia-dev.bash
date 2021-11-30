@@ -1,8 +1,6 @@
 JULIA_MASTER="/home/$USER/ghq/git.sr.ht/~ninjin/julia-nix/"
 case "$1" in
     "link")
-        shift 1
-
         if [[ -x "$JULIA_MASTER/julia" ]]; then
             ln -sf $JULIA_MASTER/julia $PRJ_ROOT/julia
         fi

@@ -1,11 +1,15 @@
 [devshell]
+startup.project_path.text = '''
+export PATH=$PRJ_ROOT/bin:$PATH
+'''
+
 #packages = [ "julia_16-bin" ]
 #
 [[commands]]
 name = "julia-bin"
 category = "Julia Package"
 command = '''
-        eval $(echo "$PRJ_ROOT/julia -L $PRJ_ROOT/startup.jl")
+        eval $(echo "$PRJ_ROOT/bin/julia -L $PRJ_ROOT/startup.jl")
         '''
 help = "Wrapped Julia"
 
@@ -13,7 +17,7 @@ help = "Wrapped Julia"
 name = "pluto"
 category = "Julia Package"
 command = '''
-        eval $(echo "$PRJ_ROOT/julia -e 'import Pkg; Pkg.activate(\".\"); Pkg.instantiate(); using Pluto; Pluto.run(host=\"$1\", port=$2)'")
+        eval $(echo "$PRJ_ROOT/bin/julia -e 'import Pkg; Pkg.activate(\".\"); Pkg.instantiate(); using Pluto; Pluto.run(host=\"$1\", port=$2)'")
         '''
 help = "launch pluto server: pluto <ip> <port>"
 
@@ -21,7 +25,7 @@ help = "launch pluto server: pluto <ip> <port>"
 name = "addPackage"
 category = "Julia Package"
 command = '''
-        eval $(echo "$PRJ_ROOT/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'")
+        eval $(echo "$PRJ_ROOT/bin/julia -e 'using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])'")
         '''
 help = "Exp: addPackage . '\"StatsFuns, Images\"' -> <activatePath> <Package Name List>"
 
@@ -30,7 +34,7 @@ help = "Exp: addPackage . '\"StatsFuns, Images\"' -> <activatePath> <Package Nam
 name = "upgrade"
 category = "Julia Package"
 command = '''
-        eval $(echo "$PRJ_ROOT/julia -e 'using Pkg; Pkg.upgrade_manifest(); Pkg.update()'")
+        eval $(echo "$PRJ_ROOT/bin/julia -e 'using Pkg; Pkg.upgrade_manifest(); Pkg.update()'")
         '''
 help = "Upgrading your manifest"
 
