@@ -80,11 +80,26 @@
     },
     "flake-utils_2": {
       "locked": {
-        "lastModified": 1634851050,
-        "narHash": "sha256-N83GlSGPJJdcqhUxSCS/WwW5pksYf3VP1M13cDRTSVA=",
+        "lastModified": 1638122382,
+        "narHash": "sha256-sQzZzAbvKEqN9s0bzWuYmRaA03v40gaJ4+iL1LXjaeI=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "c91f3de5adaf1de973b797ef7485e441a65b8935",
+        "rev": "74f7e4319258e287b0f9cb95426c9853b282730b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_3": {
+      "locked": {
+        "lastModified": 1638122382,
+        "narHash": "sha256-sQzZzAbvKEqN9s0bzWuYmRaA03v40gaJ4+iL1LXjaeI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "74f7e4319258e287b0f9cb95426c9853b282730b",
         "type": "github"
       },
       "original": {
@@ -95,11 +110,26 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1637741280,
-        "narHash": "sha256-O5JZVH37ZPSNYOtQI8Yo1qyWL8KY/zrgXFowvho59/E=",
+        "lastModified": 1639037504,
+        "narHash": "sha256-vjxKO0Lw9cdDjwuBMr4vXZQfipjNHykm1xaJKuweIl4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b0ad37110045447f74207e45a970d7a27f9d1657",
+        "rev": "e3f56e1f7b66de4faddb259e816f622b819515bf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1639030701,
+        "narHash": "sha256-dGuRgm2oGguei3LMYOBS1ZmD2h8hcINRoHhYRodrdCU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ff17a0fffea0c021541ecc72a43c1079eea0599c",
         "type": "github"
       },
       "original": {
@@ -111,16 +141,8 @@
     },
     "poetry2nix": {
       "inputs": {
-        "flake-utils": [
-          "bud",
-          "beautysh",
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "bud",
-          "beautysh",
-          "nixpkgs"
-        ]
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1625240517,
@@ -140,8 +162,8 @@
       "inputs": {
         "bud": "bud",
         "devshell": "devshell",
-        "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs"
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },

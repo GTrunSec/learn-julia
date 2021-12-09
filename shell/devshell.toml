@@ -2,14 +2,13 @@
 startup.project_path.text = '''
 export PATH=$PRJ_ROOT/bin:$PATH
 '''
-
 #packages = [ "julia_16-bin" ]
-#
+
 [[commands]]
 name = "julia-bin"
 category = "Julia Package"
 command = '''
-        eval $(echo "$PRJ_ROOT/bin/julia -L $PRJ_ROOT/startup.jl")
+        eval $(echo "$PRJ_ROOT/bin/julia -L $PRJ_ROOT/startup.jl" "$@")
         '''
 help = "Wrapped Julia"
 

@@ -2,7 +2,6 @@
   description = "My julia2nix Env";
   inputs = {
     devshell = { url = "github:numtide/devshell"; };
-
     nixpkgs = { url = "github:NixOS/nixpkgs/release-21.11"; };
     flake-utils.url = "github:numtide/flake-utils";
     bud = {

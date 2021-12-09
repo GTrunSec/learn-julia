@@ -10,3 +10,6 @@
 [submodule "courses/JuliaBasics"]
 	path = courses/JuliaBasics
 	url = https://github.com/hyper0x/JuliaBasics.git
+[submodule "courses/SciMLTutorials.jl"]
+	path = courses/SciMLTutorials.jl
+	url = https://github.com/SciML/SciMLTutorials.jl
