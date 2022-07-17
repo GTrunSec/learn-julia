@@ -4,8 +4,7 @@
     devshell.url = "github:numtide/devshell";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    #julia2nix.url = "github:JuliaCN/julia2nix";
-    julia2nix.url = "/home/gtrun/ghq/github.com/JuliaCN/julia2nix";
+    julia2nix.url = "github:JuliaCN/julia2nix";
   };
   outputs = {self, ...} @ inputs: (
     inputs.flake-utils.lib.eachDefaultSystem
