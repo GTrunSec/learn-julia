@@ -12,21 +12,21 @@ command = '''
 help = "launch pluto server: pluto <ip> <port>"
 
 [[commands]]
-name = "addPackage"
+name = "addPkgs"
 category = "Julia Package"
 command = '''
         julia -e "using Pkg; Pkg.activate(\"$1\"); Pkg.add([$2])"
         '''
-help = "Exp: addPackage . '\"StatsFuns, Images\"' -> <activatePath> <Package Name List>"
+help = "Exp: addPkgs ./playground/julia_data_science '\"StatsFuns, Images\"' :: addPkgs <activatePath> <Package Name List>"
 
 
 [[commands]]
 name = "upgrade"
 category = "Julia Package"
 command = '''
-        julia -e "using Pkg; Pkg.upgrade_manifest(); Pkg.update()"
+        julia -e "using Pkg; Pkg.activate(\"$1\"); Pkg.upgrade_manifest(); Pkg.update()"
         '''
-help = "Upgrading your manifest"
+help = "Upgrading your manifest :: upgrade /playground/julia_data_science"
 
 
 [[env]]

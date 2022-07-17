@@ -17,9 +17,12 @@ in
     ];
     packages = with pkgs; [
       julia-wrapped
-      nushell
     ];
     env = [
+      {
+        name = "SSL_CERT_FILE";
+        value = "${cacert}/etc/ssl/certs/ca-bundle.crt";
+      }
       {
         name = "PYTHON";
         value = "${custom-python-env}/bin/python";
@@ -27,10 +30,6 @@ in
       {
         name = "PYTHONPATH";
         value = "${custom-python-env}/${pkgs.python3.sitePackages}";
-      }
-      {
-        name = "JULIA_GR_PROVIDER";
-        value = "GR";
       }
 ];
     commands = with pkgs; [];

@@ -11,13 +11,13 @@ jobs:
 
     - uses: cachix/install-nix-action@v17
       with:
-        install_url: https://github.com/numtide/nix-unstable-installer/releases/download/nix-2.7.0pre20220225_fd4b693/install
+        install_url: https://github.com/numtide/nix-unstable-installer/releases/download/nix-2.10.0pre20220629_b7eb4ac/install
         extra_nix_config: |
           experimental-features = nix-command flakes
           system-features = nixos-test benchmark big-parallel kvm recursive-nix
 
 
-    - name: Nix Flake Check
-      run: nix -Lv flake check
+    - name: Nix Flake Show
+      run: nix -Lv flake show
     - name: Nix Develop Check
       run: nix -Lv develop -c echo OK
