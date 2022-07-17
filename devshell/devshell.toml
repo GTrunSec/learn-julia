@@ -2,15 +2,6 @@
 startup.project_path.text = '''
 export PATH=$PRJ_ROOT/bin:$PATH
 '''
-packages = [ "julia_17-bin" ]
-
-[[commands]]
-name = "julia-bin"
-category = "Julia Package"
-command = '''
-        julia -L $PRJ_ROOT/startup.jl" "$@"
-        '''
-help = "Wrapped Julia"
 
 [[commands]]
 name = "pluto"

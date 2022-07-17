@@ -13,3 +13,6 @@
 [submodule "courses/SciMLTutorials.jl"]
 	path = courses/SciMLTutorials.jl
 	url = https://github.com/SciML/SciMLTutorials.jl
+[submodule "courses/Julia100Exercises"]
+	path = courses/Julia100Exercises
+	url = https://github.com/RoyiAvital/Julia100Exercises.git
