@@ -11,3 +11,5 @@ MIT-18S191/18S191
 /.editorconfig
 /.conform.yaml
 /treefmt.toml
+/Project.toml
+/Manifest.toml

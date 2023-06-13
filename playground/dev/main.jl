@@ -5,6 +5,7 @@ abstract type Animal end
 struct Fox <: Animal
     weight::Float64
 end
+
 struct Chicken <: Animal
     weight::Float64
 end

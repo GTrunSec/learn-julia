@@ -1,7 +1,7 @@
 [devshell]
 startup.project_path.text = '''
 export PATH=$PRJ_ROOT/bin:$PATH
-export JULIA_DEPOT_PATH=$PRJ_ROOT/.julia-depot
+# export JULIA_DEPOT_PATH=$PRJ_ROOT/.julia-depot
 '''
 
 [[commands]]

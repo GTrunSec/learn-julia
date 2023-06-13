@@ -1,5 +1,5 @@
 {
-  description = "My julia2nix Env";
+  description = "julia2nix DevEnv";
   inputs = {
     devshell.url = "github:numtide/devshell";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -29,6 +29,7 @@
         }
       ) // {
         overlays = import ./nix/overlays.nix { inherit inputs; };
+        __std = (inputs.call-flake ./nix).__std;
       }
     )
     ;

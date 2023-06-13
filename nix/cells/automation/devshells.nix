@@ -15,7 +15,7 @@ in
 {
   # Tool Homepage: https://numtide.github.io/devshell/
   default = lib.dev.mkShell {
-    name = "Julia Development Shell";
+    name = "Julia Devshell";
     _module.args.pkgs = nixpkgs;
     imports = [
       (

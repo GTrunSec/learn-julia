@@ -21,6 +21,12 @@ let
     ;
 in
 {
+  devshell.startup.link-project = {
+    deps = [ ];
+    text = ''
+      ln -sf $PRJ_ROOT/playground/dev/*.toml $PRJ_ROOT/.
+    '';
+  };
   packages = with pkgs; [ julia-wrapped ];
   env = [
     {
@@ -35,5 +41,6 @@ in
   commands = with pkgs; [ {
     name = "juliaWithPakcges";
     command = l.getExe juliaWithPakcges;
+    help = "julia with packages from nixpkgs-julia PR";
   } ];
 }
