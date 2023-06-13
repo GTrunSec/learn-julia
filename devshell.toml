@@ -1,3 +1,5 @@
+project = "dev"
+
 [devshell]
 startup.project_path.text = '''
 export PATH=$PRJ_ROOT/bin:$PATH

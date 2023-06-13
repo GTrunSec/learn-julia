@@ -18,10 +18,7 @@ in
     name = "Julia Devshell";
     _module.args.pkgs = nixpkgs;
     imports = [
-      (
-        import (inputs.local + "/nix/devshell.nix")
-          inputs.local.inputs.nixpkgs-julia
-      )
+      (import (inputs.local + "/nix/devshell.nix") inputs)
       (std.inputs.devshell.lib.importTOML (inputs.local + "/devshell.toml"))
       inputs.local.inputs.julia2nix.${nixpkgs.system}.julia2nix.devshellProfiles.dev
     ];

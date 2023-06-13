@@ -1,4 +1,9 @@
-#+TITLE: My Julia Env
+#+TITLE: Learning Julia
+
+* Setup your project env
+
+- specific a project name with *project="dev/MIT-18S191"* in ./devshell.toml.
+- use *nix develop* or *direnv* enter the devshell.
 
 * Julia Version
 #+begin_src julia :async :exports both :results output
@@ -6,19 +11,15 @@ versioninfo()
 #+end_src
 
 #+RESULTS:
-#+begin_example
-Julia Version 1.9.1
-Commit 147bdf428cd (2023-06-07 08:27 UTC)
-Platform Info:
-  OS: Linux (x86_64-linux-gnu)
-  CPU: 12 × Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
-  WORD_SIZE: 64
-  LIBM: libopenlibm
-  LLVM: libLLVM-14.0.6 (ORCJIT, skylake)
-  Threads: 1 on 12 virtual cores
-Environment:
-  JULIA_DEPOT_PATH = ./.julia_depot
-#+end_example
+: Julia Version 1.9.1
+: Commit 147bdf428cd (2023-06-07 08:27 UTC)
+: Platform Info:
+:   OS: Linux (x86_64-linux-gnu)
+:   CPU: 12 × Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
+:   WORD_SIZE: 64
+:   LIBM: libopenlibm
+:   LLVM: libLLVM-14.0.6 (ORCJIT, skylake)
+:   Threads: 1 on 12 virtual cores
 
 
 * Julia Test
