@@ -1,6 +1,7 @@
 [devshell]
 startup.project_path.text = '''
 export PATH=$PRJ_ROOT/bin:$PATH
+export JULIA_DEPOT_PATH=$PRJ_ROOT/.julia-depot
 '''
 
 [[commands]]
@@ -27,12 +28,9 @@ command = '''
         julia -e "using Pkg; Pkg.activate(\"$1\"); Pkg.upgrade_manifest(); Pkg.update()"
         '''
 help = "Upgrading your manifest :: upgrade /playground/julia_data_science"
-
-
-[[env]]
-name = "JULIA_DEPOT_PATH"
-value = "./.julia_depot"
-
+# [[env]]
+# name = "JULIA_DEPOT_PATH"
+# value = "$PRJ_ROOT/.julia_depot"
 # [[env]]
 # name = "PATH"
 # prefix = "bin"

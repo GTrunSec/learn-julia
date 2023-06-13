@@ -1,7 +1,13 @@
 # -*- mode: gitignore; -*-
 .direnv
-.julia_depot
+/.julia-depot
 result
 julia
 
 MIT-18S191/18S191
+
+# nixago: ignore-linked-files
+/lefthook.yml
+/.editorconfig
+/.conform.yaml
+/treefmt.toml

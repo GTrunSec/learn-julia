@@ -7,14 +7,15 @@ versioninfo()
 
 #+RESULTS:
 #+begin_example
-Julia Version 1.7.0-rc2
-Commit f23fc0d27a* ()
+Julia Version 1.9.1
+Commit 147bdf428cd (2023-06-07 08:27 UTC)
 Platform Info:
-  OS: Linux (x86_64-unknown-linux-gnu)
-  CPU: Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
+  OS: Linux (x86_64-linux-gnu)
+  CPU: 12 × Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
   WORD_SIZE: 64
   LIBM: libopenlibm
-  LLVM: libLLVM-12.0.1 (ORCJIT, skylake)
+  LLVM: libLLVM-14.0.6 (ORCJIT, skylake)
+  Threads: 1 on 12 virtual cores
 Environment:
   JULIA_DEPOT_PATH = ./.julia_depot
 #+end_example
@@ -31,3 +32,5 @@ Environment:
 :  0  0  1
 :  0  0  2
 :  3  4  5
+
+* materials
