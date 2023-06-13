@@ -87,6 +87,11 @@
             "*.yaml"
             "*.toml"
           ];
+          excludes = [
+            "Project.toml"
+            "Manifest.toml"
+            "courses/*"
+          ];
         };
         shell = {
           command = "shfmt";
