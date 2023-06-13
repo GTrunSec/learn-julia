@@ -16,3 +16,6 @@
 [submodule "courses/Julia100Exercises"]
 	path = courses/Julia100Exercises
 	url = https://github.com/RoyiAvital/Julia100Exercises.git
+[submodule "courses/LeetCode.jl"]
+	path = courses/LeetCode.jl
+	url = https://github.com/JuliaCN/LeetCode.jl
