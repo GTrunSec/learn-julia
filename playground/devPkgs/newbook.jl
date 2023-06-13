@@ -14,7 +14,7 @@ using Plots
 Pkg.instantiate()
 
 # ╔═╡ 425c320d-8292-4b18-b8ac-3e8a3964b22c
-y=randn(10_000_00)
+y = randn(10_000_00)
 
 # ╔═╡ 7d22b54e-e15a-4c34-ac0d-d8e748d9dbd2
 plot(y)

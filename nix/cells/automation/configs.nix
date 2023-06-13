@@ -9,7 +9,11 @@
 {
   inputs,
   cell,
-}: {
+}:
+let
+  inherit (inputs) local nixpkgs;
+in
+{
   # Tool Homepage: https://editorconfig.org/
   editorconfig = {
     data = {
@@ -63,6 +67,14 @@
       ;
     data = {
       formatter = {
+        julia = {
+          inherit
+            (local.inputs.julia2nix.${nixpkgs.system}.julia2nix.nixago.treefmt.__passthru.data.formatter.julia.content
+            )
+            command
+            ;
+          includes = [ "playground/*.jl" ];
+        };
         nix = {
           command = "nixfmt";
           includes = [ "*.nix" ];

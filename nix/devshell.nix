@@ -24,10 +24,6 @@ in
   packages = with pkgs; [ julia-wrapped ];
   env = [
     {
-      name = "SSL_CERT_FILE";
-      value = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
-    }
-    {
       name = "PYTHON";
       value = "${custom-python-env}/bin/python";
     }

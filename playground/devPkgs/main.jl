@@ -15,7 +15,7 @@ big_bird = Chicken(2.9)
 
 combined_weight(A1::Animal, A2::Animal) = A1.weight + A2.weight
 
-combined_weight(Chicken(4.2),Fox(3.0))
+combined_weight(Chicken(4.2), Fox(3.0))
 
 function naive_trouble(A::Animal, B::Animal)
     if A isa Fox && B isa Chicken
@@ -27,4 +27,4 @@ function naive_trouble(A::Animal, B::Animal)
     end
 end
 
-naive_trouble(big_bird,fiona)
+naive_trouble(big_bird, fiona)

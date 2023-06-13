@@ -23,6 +23,7 @@ in
           inputs.local.inputs.nixpkgs-julia
       )
       (std.inputs.devshell.lib.importTOML (inputs.local + "/devshell.toml"))
+      inputs.local.inputs.julia2nix.${nixpkgs.system}.julia2nix.devshellProfiles.dev
     ];
     # Tool Homepage: https://nix-community.github.io/nixago/
     # This is Standard's devshell integration.
