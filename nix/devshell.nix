@@ -12,7 +12,7 @@ let
     ignoreCollisions = true;
   };
   juliaWithPakcges =
-    inputs.local.inputs.nixpkgs-julia.legacyPackages.${pkgs.system}.julia_18.withPackages
+    inputs.nixpkgs-julia.legacyPackages.${pkgs.system}.julia_18.withPackages
       [
         "Plots"
         "JSON3"
@@ -26,7 +26,7 @@ in
     internal = true;
     type =
       let
-        projects = l.attrNames (l.readDir (inputs.local + "/playground"));
+        projects = l.attrNames (l.readDir (inputs.self + "/playground"));
       in
       l.types.enum projects
       ;

@@ -9,7 +9,10 @@
 let
   inherit (inputs.std) lib;
   inherit (inputs) std;
-  nixpkgs = inputs.local.nixpkgs;
+  nixpkgs =
+    inputs.local.inputs.nixpkgs.legacyPackages.${inputs.nixpkgs.system}.appendOverlays
+      [ inputs.local.overlays.default ]
+    ;
   l = nixpkgs.lib // builtins;
 in
 {
@@ -18,7 +21,7 @@ in
     name = "Julia Devshell";
     _module.args.pkgs = nixpkgs;
     imports = [
-      (import (inputs.local + "/nix/devshell.nix") inputs)
+      inputs.local.devshellModules.devshell
       (std.inputs.devshell.lib.importTOML (inputs.local + "/devshell.toml"))
       inputs.local.inputs.julia2nix.${nixpkgs.system}.julia2nix.devshellProfiles.dev
     ];
