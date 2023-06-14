@@ -1,14 +1,11 @@
 {
-  inputs.blank.follows = "std/blank";
+  inputs.nixpkgs.url =
+    "github:NixOS/nixpkgs/6b1b72c0f887a478a5aac355674ff6df0fc44f44";
   inputs.std.url = "github:divnix/std";
-  # inputs.nixpkgs.follows = "blank";
-  inputs.nixpkgs.follows = "std/nixpkgs";
-  # inputs.std.inputs.nixpkgs.follows = "nixpkgs";
-
+  inputs.std.inputs.nixpkgs.follows = "nixpkgs";
   inputs.std.inputs.devshell.follows = "devshell";
   inputs.devshell.url = "github:numtide/devshell";
   inputs.nixfmt.url = "github:serokell/nixfmt/?ref=refs/pull/118/head";
-  inputs.nixfmt.inputs.nixpkgs.follows = "nixpkgs";
   inputs.call-flake.url = "github:divnix/call-flake";
   inputs.flops.url = "github:gtrunsec/flops";
 
@@ -24,18 +21,16 @@
         (
           ((pops.default.setInitInputs inputs).addInputsExtender (
             POP.lib.extendPop pops.inputsExtender (
-              self: super: {
-                inputs = {
-                  nixpkgs = self.inputs.local.inputs.nixpkgs;
-                  local = inputs.call-flake ../.;
-                };
-              }
+              self: super: { inputs = { local = inputs.call-flake ../.; }; }
             )
           )).addInputsOverrideExtender
             (
               POP.lib.extendPop pops.inputsExtender (
                 self: super: {
-                  # overrideInputs.std = { inputs.nixpkgs = self.inputs.nixpkgs; };
+                  overrideInputs = {
+                    # nixpkgs-override.locked = self.initInputs.local.inputs.nixpkgs.sourceInfo;
+                    # std.inputs.nixpkgs = "nixpkgs-override";
+                  };
                 }
               )
             )
