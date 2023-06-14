@@ -16,6 +16,6 @@ jobs:
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
 
     - name: Nix Flake Show
-      run: nix -Lv flake show
+      run: nix -Lv flake show --impure
     - name: Nix Develop Check
-      run: nix -Lv develop -c echo OK
+      run: nix -Lv develop --impure -c echo OK
