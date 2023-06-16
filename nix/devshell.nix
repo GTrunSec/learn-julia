@@ -22,7 +22,6 @@ let
 in
 {
   options.project = lib.mkOption {
-    default = "dev";
     internal = true;
     type =
       let
@@ -36,7 +35,7 @@ in
     devshell.startup.link-project = {
       deps = [ ];
       text = ''
-        ln -sf $PRJ_ROOT/playground/dev/*.toml $PRJ_ROOT/.
+        ln -sf $PRJ_ROOT/playground/${config.project}/*.toml $PRJ_ROOT/.
       '';
     };
     packages = with pkgs; [ julia-wrapped ];
