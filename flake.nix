@@ -38,13 +38,14 @@
           inputs',
           self',
           ...
-        }: {
+        }:
+        {
           _module.args.pkgs = import inputs.nixpkgs {
             overlays = [ self.overlays.default ];
           };
           devShells.default = local.devShells.${pkgs.system}.default;
         }
-        ;
+      ;
     }
-    ;
+  ;
 }

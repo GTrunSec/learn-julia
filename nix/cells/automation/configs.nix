@@ -64,7 +64,7 @@ in
         ''
           export NODE_PATH=${inputs.nixpkgs.nodePackages.prettier-plugin-toml}/lib/node_modules:$NODE_PATH
         ''
-      ;
+    ;
     data = {
       formatter = {
         julia = {
@@ -72,7 +72,7 @@ in
             (local.inputs.julia2nix.${nixpkgs.system}.julia2nix.nixago.treefmt.__passthru.data.formatter.julia.content
             )
             command
-            ;
+          ;
           includes = [ "playground/*.jl" ];
         };
         nix = {

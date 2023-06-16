@@ -12,7 +12,7 @@ let
   nixpkgs =
     inputs.local.inputs.nixpkgs.legacyPackages.${inputs.nixpkgs.system}.appendOverlays
       [ inputs.local.overlays.default ]
-    ;
+  ;
   l = nixpkgs.lib // builtins;
 in
 {

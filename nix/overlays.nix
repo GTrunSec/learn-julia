@@ -1,6 +1,7 @@
 {
   inputs,
-}: {
+}:
+{
   default =
     final: prev: {
       julia-wrapped = inputs.julia2nix.lib.${prev.system}.julia-wrapped {
@@ -10,5 +11,5 @@
         # makeWrapperArgs = ["--add-flags" "-L''${../startup.jl}"];
       };
     }
-    ;
+  ;
 }
