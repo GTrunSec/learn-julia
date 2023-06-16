@@ -481,11 +481,11 @@
         "std-ext": "std-ext"
       },
       "locked": {
-        "lastModified": 1686643021,
-        "narHash": "sha256-MlLJiW4SFasOef3FbvSVTzXTv3OArWAEWsWtcoVGBZY=",
+        "lastModified": 1686912568,
+        "narHash": "sha256-kx9i6/iDI1NgQNsxI2XG/FVadhmEPD/jxBVFN12bCOc=",
         "owner": "JuliaCN",
         "repo": "julia2nix",
-        "rev": "783b56a2943a079ed58ca2617737680dd5e10650",
+        "rev": "b366fb6a29b60c5d3bf82741f329c0b97ddbdd43",
         "type": "github"
       },
       "original": {
