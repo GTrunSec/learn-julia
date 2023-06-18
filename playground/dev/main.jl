@@ -2,6 +2,7 @@ a = 1 + 2
 b = "s"
 
 abstract type Animal end
+
 struct Fox <: Animal
     weight::Float64
 end
@@ -12,7 +13,6 @@ end
 
 fiona = Fox(4.2)
 big_bird = Chicken(2.9)
-
 
 combined_weight(A1::Animal, A2::Animal) = A1.weight + A2.weight
 
