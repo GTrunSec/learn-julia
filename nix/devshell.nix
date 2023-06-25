@@ -12,7 +12,7 @@ let
     ignoreCollisions = true;
   };
   juliaWithPakcges =
-    inputs.nixpkgs-julia.legacyPackages.${pkgs.system}.julia_18.withPackages
+    inputs.nixpkgs-julia.legacyPackages.${pkgs.system}.julia_19.withPackages
       [
         "Plots"
         "JSON3"

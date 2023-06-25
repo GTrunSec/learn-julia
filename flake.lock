@@ -481,11 +481,11 @@
         "std-ext": "std-ext"
       },
       "locked": {
-        "lastModified": 1686912568,
-        "narHash": "sha256-kx9i6/iDI1NgQNsxI2XG/FVadhmEPD/jxBVFN12bCOc=",
+        "lastModified": 1687655417,
+        "narHash": "sha256-Nn5anxn3zcd3Kb909d74Evjqt8kVkQd9SgpKI4ynTn0=",
         "owner": "JuliaCN",
         "repo": "julia2nix",
-        "rev": "b366fb6a29b60c5d3bf82741f329c0b97ddbdd43",
+        "rev": "23902cd905ae258b0b668fa0fd6c035b94ef0abc",
         "type": "github"
       },
       "original": {
@@ -724,11 +724,11 @@
     },
     "nixpkgs-julia": {
       "locked": {
-        "lastModified": 1686639144,
-        "narHash": "sha256-+JHfi51eWX5WEp3Dl+/0FDWqDtXhfNjV9V11ZDa0aec=",
+        "lastModified": 1687652756,
+        "narHash": "sha256-YYGaYjFYOqvAflUMn1UPtnygJnM44PIc6FJ3nwYQDMI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "75128ccca126b03203b3a543ab2d1c8fb62496df",
+        "rev": "4df98003e538fd7ee960f50dc7957d716655f868",
         "type": "github"
       },
       "original": {
