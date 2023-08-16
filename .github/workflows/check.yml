@@ -18,4 +18,4 @@ jobs:
     - name: Nix Flake Show
       run: nix -Lv flake show --impure
     - name: Nix Develop Check
-      run: nix -Lv develop --impure -c echo OK
+      run: nix -Lv develop ./nix --impure -c echo OK
