@@ -1,20 +1,15 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/6b1b72c0f887a478a5aac355674ff6df0fc44f44";
+  inputs.nixpkgs.follows = "std-ext/nixpkgs";
   inputs.std-ext.url = "github:gtrunsec/std-ext";
   inputs.std.follows = "std-ext/std";
   inputs.std.inputs.nixpkgs.follows = "nixpkgs";
-  inputs.nixfmt.url = "github:serokell/nixfmt/?ref=refs/pull/118/head";
-  inputs.nixfmt.inputs.nixpkgs.follows = "std-ext/nixpkgs";
   inputs.call-flake.url = "github:divnix/call-flake";
   inputs.flops.url = "github:gtrunsec/flops";
 
   outputs =
-    {
-      flops,
-      ...
-    }@inputs:
+    { flops, ... }@inputs:
     let
-      inherit (flops.inputs) POP nixlib;
+      inherit (flops.inputs) POP;
       inherit (flops.lib.flake) pops;
       __inputs__ =
         (((pops.default.setInitInputs inputs).addInputsExtender (
@@ -46,14 +41,13 @@
         cellBlocks = with std.blockTypes; [
           # Development Environments
           (nixago "configs")
-          (devshells "devshells")
+          (devshells "shells")
         ];
       }
       {
         devShells = std.harvest inputs.self [
-          "automation"
-          "devshells"
+          "dev"
+          "shells"
         ];
-      }
-  ;
+      };
 }

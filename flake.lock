@@ -35,21 +35,6 @@
         "type": "github"
       }
     },
-    "call-flake": {
-      "locked": {
-        "lastModified": 1686448809,
-        "narHash": "sha256-Cc+Krf2Ar5NjFMxUWaJFOAQkj8s40r6iEJwIfbxa0Vc=",
-        "owner": "divnix",
-        "repo": "call-flake",
-        "rev": "a0b97f9c6d21997fe5f1ff9a5eedc05a7935a917",
-        "type": "github"
-      },
-      "original": {
-        "owner": "divnix",
-        "repo": "call-flake",
-        "type": "github"
-      }
-    },
     "cortex": {
       "flake": false,
       "locked": {
@@ -297,11 +282,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1685662779,
-        "narHash": "sha256-cKDDciXGpMEjP1n6HlzKinN0H+oLmNpgeCTzYnsA2po=",
+        "lastModified": 1690933134,
+        "narHash": "sha256-ab989mN63fQZBFrkk4Q8bYxQCktuHmBIBqUG1jl6/FQ=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "71fb97f0d875fd4de4994dfb849f2c75e17eb6c3",
+        "rev": "59cf3f1447cfc75087e7273b04b31e689a8599fb",
         "type": "github"
       },
       "original": {
@@ -724,11 +709,11 @@
     },
     "nixpkgs-julia": {
       "locked": {
-        "lastModified": 1687652756,
-        "narHash": "sha256-YYGaYjFYOqvAflUMn1UPtnygJnM44PIc6FJ3nwYQDMI=",
+        "lastModified": 1692101357,
+        "narHash": "sha256-J7b+9jhrqCoacXsJRr98gXVHr8qdI/PJonUDk4+9M8M=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "4df98003e538fd7ee960f50dc7957d716655f868",
+        "rev": "6998055237d1b6aa609e1a29e0e24ea588727786",
         "type": "github"
       },
       "original": {
@@ -867,11 +852,11 @@
     },
     "nixpkgs_9": {
       "locked": {
-        "lastModified": 1687011986,
-        "narHash": "sha256-ZNSi/wBw12d7LO8YcZ4aehIlPp4lgSkKbrHaoF80IKI=",
+        "lastModified": 1692100542,
+        "narHash": "sha256-H4f4BMl6cII32vg44RW8S/f0sel+6oJVsI1Eek9IwX4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "2c09e8eb8717e240ef9c5727c1cc9186db9fb309",
+        "rev": "32e8028c1c6d16f8783fb226fe1ab5b5cd5603ed",
         "type": "github"
       },
       "original": {
@@ -1056,7 +1041,6 @@
     },
     "root": {
       "inputs": {
-        "call-flake": "call-flake",
         "devshell": "devshell",
         "flake-parts": "flake-parts",
         "julia2nix": "julia2nix",

@@ -17,8 +17,7 @@ let
         "Plots"
         "JSON3"
         "Pluto"
-      ]
-  ;
+      ];
 in
 {
   options.project = lib.mkOption {
@@ -27,8 +26,7 @@ in
       let
         projects = l.attrNames (l.readDir (inputs.self + "/playground"));
       in
-      l.types.enum projects
-    ;
+      l.types.enum projects;
     description = "Project to run";
   };
   config = {

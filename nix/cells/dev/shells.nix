@@ -2,17 +2,13 @@
 
    They conveniently also generate config files in their startup hook.
 */
-{
-  inputs,
-  cell,
-}:
+{ inputs, cell }:
 let
   inherit (inputs.std) lib;
   inherit (inputs) std;
   nixpkgs =
     inputs.local.inputs.nixpkgs.legacyPackages.${inputs.nixpkgs.system}.appendOverlays
-      [ inputs.local.overlays.default ]
-  ;
+      [ inputs.local.overlays.default ];
   l = nixpkgs.lib // builtins;
 in
 {
@@ -30,7 +26,7 @@ in
     # It runs the startup hook when entering the shell.
     nixago = [
       (lib.dev.mkNixago lib.cfg.conform)
-      (lib.dev.mkNixago lib.cfg.treefmt cell.configs.treefmt)
+      (inputs.std-ext.preset.nixago.treefmt cell.configs.treefmt)
       (lib.dev.mkNixago lib.cfg.editorconfig cell.configs.editorconfig)
       (lib.dev.mkNixago lib.cfg.githubsettings cell.configs.githubsettings)
       (lib.dev.mkNixago lib.cfg.lefthook cell.configs.lefthook)

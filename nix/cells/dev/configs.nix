@@ -6,10 +6,7 @@
       (2) have all the things in one place / fromat
       (3) potentially share / re-use configuration data - keeping it in sync
 */
-{
-  inputs,
-  cell,
-}:
+{ inputs, cell }:
 let
   inherit (inputs) local nixpkgs;
 in
@@ -53,18 +50,6 @@ in
 
   # Tool Homepage: https://numtide.github.io/treefmt/
   treefmt = {
-    packages = [
-      inputs.nixfmt.packages.nixfmt
-      inputs.nixpkgs.nodePackages.prettier
-      inputs.nixpkgs.nodePackages.prettier-plugin-toml
-      inputs.nixpkgs.shfmt
-    ];
-    devshell.startup.prettier-plugin-toml =
-      inputs.nixpkgs.lib.stringsWithDeps.noDepEntry
-        ''
-          export NODE_PATH=${inputs.nixpkgs.nodePackages.prettier-plugin-toml}/lib/node_modules:''${NODE_PATH-}
-        ''
-    ;
     data = {
       formatter = {
         julia = {
@@ -75,53 +60,11 @@ in
           ;
           includes = [ "playground/*.jl" ];
         };
-        nix = {
-          command = "nixfmt";
-          includes = [ "*.nix" ];
-        };
         prettier = {
-          command = "prettier";
-          options = [
-            "--plugin"
-            "prettier-plugin-toml"
-            "--write"
-          ];
-          includes = [
-            "*.css"
-            "*.html"
-            "*.js"
-            "*.json"
-            "*.jsx"
-            "*.md"
-            "*.mdx"
-            "*.scss"
-            "*.ts"
-            "*.yaml"
-            "*.toml"
-          ];
           excludes = [
             "Project.toml"
             "Manifest.toml"
             "courses/*"
-          ];
-        };
-        shell = {
-          command = "shfmt";
-          options = [
-            "-i"
-            "2"
-            "-s"
-            "-w"
-          ];
-          includes = [ "*.sh" ];
-        };
-        rustfmt = {
-          command = "rustfmt";
-          excludes = [ ];
-          includes = [ "*.rs" ];
-          options = [
-            "--edition"
-            "2021"
           ];
         };
       };
