@@ -38,6 +38,11 @@
           _module.args.pkgs = import inputs.nixpkgs {
             overlays = [ self.overlays.default ];
           };
+          packages = {
+            juliaWithPakcges =
+              inputs.nixpkgs-julia.legacyPackages.x86_64-linux.julia_19.withPackages
+                [ "IJulia" ];
+          };
         };
     };
 }
